@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap");
+/* .portfolio{
+  display: block;
+  padding: 0 !important;
+  width: 100%;
+  margin: 0;
+} */
+.section-portfolio {
+  background-color: #f2f2fc;
+  margin: 60px 0px;
+  padding: 0 0 70px ;
+  min-height: 100vh;
+  display: block;
+  left: 270px;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+  width: 100%;
+  /* overflow: hidden; */
+}
+.content-portfolio{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.list-item-portfolio{
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .portfolio-filter {
+  /* display: flex; */
+  /* -ms-flex: 0 0 100%; */
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-left: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .portfolio-filter button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0 10px;
+  color: #302e4d;
+  cursor: pointer;
+  border-bottom: 2px solid #ec1839;
+  white-space: nowrap;
+  padding-bottom: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.portfolio .portfolio-item {
+  /* background-color: red; */
+  /* flex: 0 0 33.33%;
+  max-width: 33.33%; */
+  margin-bottom: 30px;
+  width: 100%;
+  height: 250px;
+}
+.portfolio .portfolio-item-inner .portfolio-img{
+  height: 100%;
+  width: 100%;
+}
+.portfolio .portfolio-item-inner .portfolio-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Before After */
+
+.portfolio .portfolio-item-inner:hover .web-covid::after{
+  content: "CALCULATION RATE COVID-19";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .english-test::after{
+  content: "ONLINE ENGLISH WEB TEST";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .web-portfolio::after{
+  content: "PORTFOLIO WEBSITE";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .photo1::after{
+  content: "SUPER CAR AND LANDSCAPE";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .photo2::after{
+  content: "MOUNTAIN AND RIVER";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .photo3::after{
+  content: "WORKING";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .logo1::after{
+  content: "RESTAURANT LOGO";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .logo2::after{
+  content: "MERCEDES LOGO";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .videoEditing1::after{
+  content: "FOOTBALL RHYTHM";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .videoEditing2::after{
+  content: "STOCK MARKET VOLATILITY";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+.portfolio .portfolio-item-inner:hover .videoEditing3::after{
+  content: "BUSINESS DIRECTION";
+  position: absolute;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0;
+}
+/* End Before After */
+.portfolio .portfolio-item-inner {
+  border: 5px solid #fdf9ff;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info h4 {
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  /* opacity: 0; */
+}
+.portfolio .portfolio-item .portfolio-info {
+  /* display: none; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  padding: 30px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.portfolio .portfolio-item .portfolio-info h4 {
+  opacity: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+.portfolio .portfolio-item .portfolio-info .iconPortfolio {
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  opacity: 0;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info .iconPortfolio {
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-info .iconPortfolio .icon {
+  line-height: 50px;
+  color: #ec1839 !important;
+}

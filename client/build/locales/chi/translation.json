@@ -1,0 +1,76 @@
+{
+    "menu": {
+        "home": "主页",
+        "aboutme": "关于我",
+        "portfolio": "作品集",
+        "contact": "联系",
+        "myblog": "我的博客",
+        "otherSkills": "其他技能"
+    },
+    "language": {
+        "choose": "选择语言"
+    },
+    "about": {
+        "namePage": "关于我",
+        "name": "我是 Le Tang Co",
+        "titleIntro": "我是 Le Tang Co - ReactJS Web Developer",
+        "titleContent": "我今年21岁，是胡志明市信息技术大学的学生，主修信息系统。我在一家对Web编程充满热情的信息技术公司实习了2个月，并想学习，提高知识并与各地的朋友交流。",
+        "intro": {
+            "iam": "我今年",
+            "content": "岁，是胡志明市信息技术大学的学生，主修信息系统。 我在一家对网站编程充满热情的信息技术公司实习了2个月，想学习，提高知识并与世界各地的朋友交流。"
+        }
+    },
+    "detailIntro": {
+        "birthday": {
+            "title": "生日:",
+            "value": "16/08/1999"
+        },
+        "age": {
+            "title": "年龄:",
+            "value": "21"
+        },
+        "email": {
+            "title": "电子邮件:",
+            "value": ""
+        },
+        "phone": {
+            "title": "电话:",
+            "value": "(+84) 332.858.127"
+        },
+        "university": {
+            "title": "大学:",
+            "value": "信息技术"
+        },
+        "freelance": {
+            "title": "自由职业者:",
+            "value": "可用的"
+        },
+        "city": {
+            "title": "市:",
+            "value": "Ho Chi Minh, Viet Nam"
+        },
+        "languages": {
+            "title": "语言能力:",
+            "value": "越南语，英语"
+        },
+        "Instagram": {
+            "title": "照片墙:",
+            "value": "tangco_it"
+        },
+        "Position": {
+            "title": "位置:",
+            "value": "ReactJS Web开发人员"
+        }
+    },
+    "aboutBtn": {
+        "downloadCV": "下载简历",
+        "contact": "联系"
+    }
+    ,
+    "achievement":{
+        "box1":"经验月",
+        "box2":"完成项目",
+        "box3":"顾客快乐",
+        "box4":"获奖"
+    }
+}

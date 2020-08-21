@@ -1,0 +1,76 @@
+{
+    "menu": {
+        "home": "TRANG CHỦ",
+        "aboutme": "BẢN THÂN",
+        "portfolio": "DỰ ÁN",
+        "contactme": "LIÊN HỆ",
+        "myblog": "TRANG CÁ NHÂN",
+        "otherSkills": "KỸ NĂNG KHÁC"
+    },
+    "language": {
+        "choose": "Chọn ngôn ngữ"
+    },
+    "about": {
+        "namePage": "Về Bản Thân",
+        "name": "Tôi là Lê Tăng Có",
+        "titleIntro": "Tôi là Lê Tăng Có - ReactJS Web Developer",
+        "titleContent": "Tôi 21 tuổi là sinh viên trường Đại học Công Nghệ Thông tin Thành Phố Hồ Chí Minh, chuyên ngành Hệ thống thông tin. Tôi đã tham gia 2 tháng thực tập sinh tại một công ty Công nghệ thông tin với sự đam mê lập trình Web và mong muốn học hỏi, trau dồi kiến thức, giao lưu các bạn ở mọi nơi.",
+        "intro": {
+            "iam": "Tôi",
+            "content": "là sinh viên trường Đại học Công nghệ thông tin TP.HCM, chuyên ngành Hệ thống thông tin. Tôi đã tham gia thực tập được 2 tháng tại một công ty Công nghệ thông tin với niềm đam mê lập trình Website và muốn học hỏi, trau dồi kiến thức, giao lưu với tất cả mọi người."
+        }
+    },
+    "detailIntro": {
+        "birthday": {
+            "title": "Ngày sinh:",
+            "value": "16/08/1999"
+        },
+        "age": {
+            "title": "Tuổi:",
+            "value": "21"
+        },
+        "email": {
+            "title": "E-mail:",
+            "value": ""
+        },
+        "phone": {
+            "title": "Điện thoại:",
+            "value": "(+84) 332.858.127"
+        },
+        "university": {
+            "title": "Đại học:",
+            "value": "Công nghệ thông tin"
+        },
+        "freelance": {
+            "title": "Nghề tự do:",
+            "value": "Sẵn sàng"
+        },
+        "city": {
+            "title": "Thành phố: ",
+            "value": ""
+        },
+        "languages": {
+            "title": "Ngôn ngữ:",
+            "value": "Tiếng Việt, Tiếng Anh"
+        },
+        "Instagram": {
+            "title": "Instagram:",
+            "value": "tangco_it"
+        },
+        "Position": {
+            "title": "Vị trí:",
+            "value": "ReactJS Web Developer"
+        }
+    },
+    "aboutBtn": {
+        "downloadCV": "Tải về CV",
+        "contact": "Liên hệ"
+    }
+    ,
+    "achievement":{
+        "box1":"THÁNG KINH NGHIỆM",
+        "box2":"DỰ ÁN ĐÃ HOÀN THÀNH",
+        "box3":"KHÁCH HÀNG HÀI LÒNG",
+        "box4":"GIẢI THƯỞNG"
+    }
+}

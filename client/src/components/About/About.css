@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+.about-section .container {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+.section-title {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+.section-title h2 {
+  font-size: 30px;
+  color: #302e4d;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+}
+.section-title h2::before {
+  content: "";
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.section-title h2::after {
+  content: "";
+  height: 4px;
+  width: 25px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+}
+.row-about {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  position: relative;
+}
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* About Section */
+
+.about-section .about-content {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about-section .about-content .about-text {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about-section .about-content .about-text h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #302e4d;
+}
+.about-section .about-content .about-text p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #504e70;
+  margin: 0;
+}
+
+/* About Me */
+.row-about .info-item {
+  /* background-color: red */
+}
+
+/* Achievement About */
+.achievement-info {
+}
+
+.achievement-info .achievement-item:nth-child(1),
+.achievement-info .achievement-item:nth-child(3) {
+  padding: 0 15px 15px 0;
+}
+.achievement-info .achievement-item:nth-child(2),
+.achievement-info .achievement-item:nth-child(4) {
+  padding: 0 0 15px 15px;
+}
+.achievement-info .achievement-item div {
+  display: block;
+  border: 1px solid #e8dfec;
+  min-height: 170px;
+  /* text-align: center;
+    vertical-align: middle; */
+  padding: 20px 30px 10px 45px;
+  background-color: #fdf9ff;
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.achievement-info .achievement-item div h1 {
+  font-size: 58px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+.achievement-info .achievement-item div h1 label {
+  vertical-align: super;
+  font-size: 33px;
+  color: #504e70;
+}
+.achievement-info .achievement-item div p {
+  /* text-align: center; */
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #302e4d;
+  margin: 0;
+}
+.about-section .about-content-2 {
+  margin-top: 50px;
+}
+/* Personal Info */
+.personal-info {
+}
+.about-content-2 .personal-info .row-about .info-item {
+  padding-left: 0;
+  padding-right: 15px;
+}
+.about-content-2 .personal-info .row-about .info-item p {
+  font-weight: 700;
+  color: #504e70;
+  /* background-color: red; */
+  border-bottom: 1px solid #d4d4e3;
+  line-height: 40px;
+}
+.about-content-2 .personal-info .row-about .info-item p span {
+  font-weight: 400;
+  color: #504e70;
+}
+
+/*  Custom button DownloadCV */
+.btn-personal-about {
+  padding: 0;
+}
+.btn-personal-about div {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: left;
+  -ms-flex-align: left;
+  -ms-flex-pack: left;
+  align-items: left;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.btn-personal-about div p {
+  display: inline-block;
+  background-color: #ec1839;
+  height: 45px;
+  width: auto;
+  padding: 0 20px;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+  color: #ffffff;
+  border-radius: 50px;
+  margin-right: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-personal-about div p:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* Custom scroll Header */
+.header-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar-scroll {
+  height: 5px;
+  background: #ec1839;
+  width: 0%;
+}
+
+/* Custom Skills Info */
+.skills-info {
+  margin-bottom: 15px;
+  padding: 0 0 0 30px;
+  /* background-color: white; */
+}
+.skills-info .skill-items {
+  background-color: white;
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+}
+.containers-skill {
+  width: 100%;
+  background-color: #ddd;
+  position: relative;
+}
+
+.containers-skill .skills {
+  text-align: right;
+  color: white;
+  height: 5px;
+}
+
+.containers-skill .html {
+  width: 90%;
+  background-color: #ec1839;
+} /* Green */
+.containers-skill .css {
+  width: 80%;
+  background-color: #ec1839;
+} /* Blue */
+.containers-skill .js {
+  width: 65%;
+  background-color: #ec1839;
+} /* Red */
+.containers-skill .php {
+  width: 60%;
+  background-color: #ec1839;
+} /* Dark Grey */
+
+/* Responsive */
+@media (max-width: 650px) {
+  .btn-personal-about div {
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    align-items: center;
+  }
+  .achievement-info .achievement-item:nth-child(1),
+  .achievement-info .achievement-item:nth-child(3) {
+    padding: 0 0 15px 0;
+  }
+  .achievement-info .achievement-item:nth-child(2),
+  .achievement-info .achievement-item:nth-child(4) {
+    padding: 0 0 15px 0;
+  }
+  /* Button Download CV */
+  .btn-personal-about div p {
+    margin-right: 8px;
+    padding: 0 12px;
+  }
+  /* Skills */
+  .skills-info {
+    padding: 0;
+  }
+}

@@ -1,0 +1,76 @@
+{
+    "menu": {
+        "home": "홈페이지",
+        "aboutme": "나에 대해서",
+        "portfolio": "포트폴리오",
+        "contact": "접촉",
+        "myblog": "내 블로그",
+        "otherSkills": "다른 기술"
+    },
+    "language": {
+        "choose": "언어 선택"
+    },
+    "about": {
+        "namePage": "나에 대해서",
+        "name": "저는 Le Tang Co",
+        "titleIntro": "저는 Le Tang Co - ReactJS Web Developer",
+        "titleContent": "저는 21 살이고 호치민시 정보 기술 대학에서 정보 시스템을 전공하고 있습니다. 저는 웹 프로그래밍에 대한 열정을 가진 정보 기술 회사에서 2 개월 동안 인턴으로 입사했으며 배우고 지식을 향상 시키며 어디서나 친구들과 교류하고 싶었습니다.",
+        "intro": {
+            "iam": "저는 ",
+            "content": "살이고 호치민시 정보 기술 대학에서 정보 시스템을 전공하고 있습니다. 저는 웹 사이트 프로그래밍에 대한 열정을 가진 정보 기술 회사에서 2 개월 동안 인턴으로 입사했으며 배우고 지식을 향상시키고 어디서나 친구들과 교류하고 싶었습니다."
+        }
+    },
+    "detailIntro": {
+        "birthday": {
+            "title": "생신:",
+            "value": "16/08/1999"
+        },
+        "age": {
+            "title": "나이:",
+            "value": "21"
+        },
+        "email": {
+            "title": "이메일:",
+            "value": ""
+        },
+        "phone": {
+            "title": "전화:",
+            "value": "(+84) 332.858.127"
+        },
+        "university": {
+            "title": "대학:",
+            "value": "정보 기술"
+        },
+        "freelance": {
+            "title": "프리랜서",
+            "value": "유효한"
+        },
+        "city": {
+            "title": "시티:",
+            "value": "Ho Chi Minh, Viet Nam"
+        },
+        "languages": {
+            "title": "언어:",
+            "value": "베트남어, 영어"
+        },
+        "Instagram": {
+            "title": "포토 월:",
+            "value": "tangco_it"
+        },
+        "Position": {
+            "title": "위치:",
+            "value": "ReactJS 웹 개발자"
+        }
+    },
+    "aboutBtn": {
+        "downloadCV": "CV 다운로드",
+        "contact": "접촉"
+    }
+    ,
+    "achievement":{
+        "box1":"경험의 달",
+        "box2":"프로젝트 완료",
+        "box3":"고객 만족",
+        "box4":"수상 경력"
+    }
+}

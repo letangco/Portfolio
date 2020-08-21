@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2e842ae6.chunk.css",
+    "main.js": "/static/js/main.fbd3727d.chunk.js",
+    "main.js.map": "/static/js/main.fbd3727d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.120ba229.js",
+    "runtime-main.js.map": "/static/js/runtime-main.120ba229.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.4a37daa4.chunk.js": "/static/js/2.4a37daa4.chunk.js",
+    "static/js/2.4a37daa4.chunk.js.map": "/static/js/2.4a37daa4.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.66e54d54c03d151731280e2b82367d83.js": "/precache-manifest.66e54d54c03d151731280e2b82367d83.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.f3cffc9e.chunk.css.map": "/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.2e842ae6.chunk.css.map": "/static/css/main.2e842ae6.chunk.css.map",
+    "static/js/2.4a37daa4.chunk.js.LICENSE.txt": "/static/js/2.4a37daa4.chunk.js.LICENSE.txt",
+    "static/media/Circle_LTC_AVT.png": "/static/media/Circle_LTC_AVT.81347628.png",
+    "static/media/PortFolio_Covi.PNG": "/static/media/PortFolio_Covi.b838fe41.PNG",
+    "static/media/PortFolio_English.PNG": "/static/media/PortFolio_English.0d2cbdfb.PNG",
+    "static/media/PortFolio_Logo.PNG": "/static/media/PortFolio_Logo.89e8b1cc.PNG",
+    "static/media/PortFolio_Logo2.PNG": "/static/media/PortFolio_Logo2.d0821c9e.PNG",
+    "static/media/PortFolio_Photography.PNG": "/static/media/PortFolio_Photography.d0bc9c73.PNG",
+    "static/media/PortFolio_Photography1.PNG": "/static/media/PortFolio_Photography1.343cfecf.PNG",
+    "static/media/PortFolio_Portfolio.PNG": "/static/media/PortFolio_Portfolio.8036229c.PNG",
+    "static/media/PortFolio_Video1.PNG": "/static/media/PortFolio_Video1.77b47e34.PNG",
+    "static/media/PortFolio_Video2.PNG": "/static/media/PortFolio_Video2.6984d7ac.PNG",
+    "static/media/PortFolio_Video3.PNG": "/static/media/PortFolio_Video3.83c5f037.PNG",
+    "static/media/coffee-apple.jpg": "/static/media/coffee-apple.2dd213aa.jpg",
+    "static/media/getFetch.cjs": "/static/media/getFetch.013f0b90.cjs",
+    "static/media/rocket.png": "/static/media/rocket.50977319.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.120ba229.js",
+    "static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.4a37daa4.chunk.js",
+    "static/css/main.2e842ae6.chunk.css",
+    "static/js/main.fbd3727d.chunk.js"
+  ]
+}

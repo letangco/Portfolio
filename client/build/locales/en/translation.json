@@ -1,0 +1,76 @@
+{
+    "menu": {
+        "home": "HOME",
+        "aboutme": "ABOUT ME",
+        "portfolio": "PORTFOLIO",
+        "contact": "CONTACT",
+        "myblog": "MY BLOG",
+        "otherSkills": "OTHER SKILLS"
+    },
+    "language": {
+        "choose": "Choose language"
+    },
+    "about": {
+        "namePage": "About Me",
+        "name": "I'm Le Tang Co",
+        "titleIntro": "I'm Le Tang Co - ReactJS Web Developer",
+        "titleContent": "I am 21 years old and a student at University of Information Technology, Ho Chi Minh City, majoring in Information Systems. I joined 2 months as an intern at an Information Technology company with a passion for Web programming and wanted to learn, improve knowledge, and exchange with friends everywhere.",
+        "intro": {
+            "iam": "I am",
+            "content": "years old and a student at University of Information Technology, Ho Chi Minh City, majoring in Information Systems. I joined 2 months as an intern at an Information Technology company with a passion for Website programming and wanted to learn, improve knowledge, and exchange with friends everywhere."
+        }
+    },
+    "detailIntro": {
+        "birthday": {
+            "title": "Birthday:",
+            "value": "16/08/1999"
+        },
+        "age": {
+            "title": "Age:",
+            "value": "21"
+        },
+        "email": {
+            "title": "Email:",
+            "value": ""
+        },
+        "phone": {
+            "title": "Phone:",
+            "value": "(+84) 332.858.127"
+        },
+        "university": {
+            "title": "University:",
+            "value": "Information Technology"
+        },
+        "freelance": {
+            "title": "Freelance:",
+            "value": ""
+        },
+        "city": {
+            "title": "City:",
+            "value": "Ho Chi Minh, Viet Nam"
+        },
+        "languages": {
+            "title": "Languages:",
+            "value": "VietNamese, English"
+        },
+        "Instagram": {
+            "title": "Instagram:",
+            "value": "tangco_it"
+        },
+        "Position": {
+            "title": "Position:",
+            "value": "ReactJS Web Developer"
+        }
+    },
+    "aboutBtn": {
+        "downloadCV": "Download CV",
+        "contact": "Contact"
+    }
+    ,
+    "achievement":{
+        "box1":"MONTHS OF EXPERIENCE",
+        "box2":"COMPLETE PROJECT",
+        "box3":"HAPPY CUSTOMERS",
+        "box4":"AWARDS WON"
+    }
+}
