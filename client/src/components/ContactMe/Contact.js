@@ -146,7 +146,7 @@ export default class Contact extends Component {
               id="myBar"
               style={{ width: window.onscroll(document.body.scrollTop/(document.documentElement.scrollHeight -
                 document.documentElement.clientHeight)*100) + "%" }}
-            ></div>
+            ></div>   
           </div>
         </div>
         {/* Content Contact */}
