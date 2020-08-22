@@ -185,5 +185,65 @@
 }
 .content-contact .containerContact .contactForm .formBox .inputBox input[type="submit"]:hover{
   background: #ec1839;
-  
+}
+
+/* SpacecChar */
+.spaceChar{
+  position: absolute;
+  top: 20%;
+  right: 0;
+  color: #ec1839;
+  cursor: pointer;
+}
+.spaceCharMessage{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  color: #ec1839;
+  cursor: pointer;
+}
+.content-contact .containerContact .contactForm .formBox .inputBox input:focus~.spaceChar{
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.spaceChar:hover::before,
+.spaceCharMessage:hover::before{
+  content: 'Cannot be left blank';
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 150px;
+  height: auto;
+  /* background: #eeeedd; */
+  z-index: 100000;
+}
+
+.displayNone{
+  display: none;
+}
+/* Responsive */
+@media only screen and (max-width: 950px){
+  .content-contact .containerContact{
+    display: flex !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .content-contact .containerContact .contactInfo{
+    width: 100%;
+    height: 313px;
+    background: #0f3959;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0, 0, 0,0.2);
+  }
+  .content-contact .containerContact .contactForm{
+    background: #fff;
+    display: block !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }

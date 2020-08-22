@@ -1,15 +1,18 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Rocket from "../../image/rocket.png";
 import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ModalSuccess from './ModalSuccess';
+import ModalFailed from './ModalFailed';
 import {
   faPhone,
   faMapMarkerAlt,
   faEnvelope,
   faBlog,
+  faExclamationCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css";
-function Contact(){
+function Contact() {
   // Pre Loading
   const [isLoading, setStateLoading] = useState(true);
   useEffect(() => {
@@ -46,22 +49,21 @@ function Contact(){
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
-  const [buttonText, setButtonText] = useState("Send Message");
   // handle inputs
 
   function handleName(e) {
     setName(e.target.value);
   };
 
- function handleLastname (e){
+  function handleLastname(e) {
     setLastName(e.target.value);
   };
 
-  function handleEmail (e) {
+  function handleEmail(e) {
     setEmail(e.target.value);
   };
-  
-  function handleSubject(e){
+
+  function handleSubject(e) {
     setSubject(e.target.value);
   }
 
@@ -70,29 +72,34 @@ function Contact(){
   };
 
   // end of handle inputs
-  useEffect(()=>{
+  useEffect(() => {
     resetForm();
-  },[sent]);
+  }, [sent]);
   // When click button submit Form
-  function formSubmit(e){
-    e.preventDefault();
-    let data = {
-      name: name,
-      lastname:lastname,
-      email: email,
-      subject: subject,
-      message:message,
-    };
+  function formSubmit(e) {
+    // e.preventDefault();
+    if (name !== "" && lastname !== "" && email !== "" && subject !== "" && message !== "") {
+      let data = {
+        name: name,
+        lastname: lastname,
+        email: email,
+        subject: subject,
+        message: message,
+      };
 
-    axios
-      .post("/api/forma", data)
-      .then((res) => {
-        setSent(true);
-        console.log("done sent");
-      })
-      .catch(() => {
-        console.log("message not send");
-      });
+      axios
+        .post("/api/forma", data)
+        .then((res) => {
+          setSent(true);
+          console.log("done sent");
+        })
+        .catch(() => {
+          console.log("message not send");
+        });
+    }
+    else {
+      return <ModalFailed />
+    }
   };
 
   // for reseting the form data
@@ -107,6 +114,12 @@ function Contact(){
       setSent(false);
     }, 3000);
   };
+  // Modal
+  function renderModal(value) {
+    if (value === true) {
+      return <ModalSuccess />
+    }
+  }
   return (
     <>
       <div className={changePreLoader(isLoading)}>
@@ -182,23 +195,38 @@ function Contact(){
               <div className="formBox">
                 <div className="inputBox w50">
                   <input type="text" name="name" value={name} required onChange={handleName} />
-                  <span>First Name</span>
+                  <span>First Name*</span>
+                  <p className={name ? "spaceChar displayNone" : "spaceChar"}>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                  </p>
                 </div>
                 <div className="inputBox w50">
                   <input type="text" name="lastname" value={lastname} required onChange={handleLastname} />
-                  <span>Last Name</span>
+                  <span>Last Name*</span>
+                  <p className={lastname ? "spaceChar displayNone" : "spaceChar"}>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                  </p>
                 </div>
                 <div className="inputBox w50">
-                  <input type="email" name="email" value={email} required onChange={handleEmail} />
-                  <span>Email Address</span>
+                  <input type="text" name="email" value={email} required onChange={handleEmail} />
+                  <span>Email Address*</span>
+                  <p className={email ? "spaceChar displayNone" : "spaceChar"}>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                  </p>
                 </div>
                 <div className="inputBox w50">
                   <input type="text" name="subject" value={subject} required onChange={handleSubject} />
-                  <span>Subject</span>
+                  <span>Subject*</span>
+                  <p className={subject ? "spaceChar displayNone" : "spaceChar"}>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                  </p>
                 </div>
                 <div className="inputBox w100">
                   <textarea name="message" value={message} required onChange={handleMessage}></textarea>
-                  <span>Write your message here...</span>
+                  <span>Write your message here...*</span>
+                  <p className={message ? "spaceCharMessage displayNone" : "spaceCharMessage"}>
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                  </p>
                 </div>
                 <div className="inputBox w100">
                   <input type="submit" value="Send" onClick={formSubmit} />
@@ -207,10 +235,13 @@ function Contact(){
             </div>
           </div>
 
+          {/* Modal */}
+          {/* <ModalSuccess showModal={sent}/>
+          <ModalFailed /> */}
+          {renderModal(sent)}
+
         </div>
       </section>
-
-
     </>
   );
 }
