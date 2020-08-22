@@ -28,6 +28,7 @@ app.post("/api/forma", (req, res) => {
   let mailOptions = {
     from: data.email,
     to: "letangco5@gmail.com",
+    // subject: `Message from ${data.name}`,
     subject: `${data.subject}`,
     html: `
     
@@ -36,7 +37,6 @@ app.post("/api/forma", (req, res) => {
       <li>Name: ${data.name}</li>
       <li>Lastname: ${data.lastname}</li>
       <li>Email: ${data.email}</li>
-    
     </ul> 
     <h3>Message</h3> 
     <p>${data.message}</p>  

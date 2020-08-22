@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState,useEffect } from "react";
 import Rocket from "../../image/rocket.png";
 import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,76 +9,86 @@ import {
   faBlog,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css";
-
-export default class Contact extends Component {
-  state = {
-    isLoading: true,
-    valueScroll: 0,
-    name: "",
-    lastname: "",
-    email: "",
-    message: "",
-    subject: "",
-    sent: false,
-    buttonText: "Send Message",
+function Contact(){
+  // Pre Loading
+  const [isLoading, setStateLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStateLoading(false); // Set lai isLoading sau 2s
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
+  function changePreLoader(value) {
+    if (value === false) {
+      return "preloader opacity-0";
+    } else return "preloader";
+  }
+  // Scroll Component
+  var [valueScroll, setScrollValue] = useState(0);
+  window.onscroll = function () {
+    ScrollIndicator();
   };
-  // Loading Pre
 
-
-
+  function ScrollIndicator() {
+    var winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    setScrollValue(scrolled);
+    // document.getElementById("myBar").style.width = scrolled + "%";
+  }
+  // Submit Form Process
+  const [name, setName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [sent, setSent] = useState(false);
+  const [buttonText, setButtonText] = useState("Send Message");
   // handle inputs
-  handleName = (e) => {
-    this.setState({
-      name: e.target.value,
-    });
+
+  function handleName(e) {
+    setName(e.target.value);
   };
 
-  handleLastname = (e) => {
-    this.setState({
-      lastname: e.target.value,
-    });
+ function handleLastname (e){
+    setLastName(e.target.value);
   };
 
-  handleEmail = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
+  function handleEmail (e) {
+    setEmail(e.target.value);
   };
+  
+  function handleSubject(e){
+    setSubject(e.target.value);
+  }
 
-  handleSubject = (e) => {
-    this.setState({
-      subject: e.target.value,
-    });
-  };
-
-  handleMessage = (e) => {
-    this.setState({
-      message: e.target.value,
-    });
+  function handleMessage(e) {
+    setMessage(e.target.value);
   };
 
   // end of handle inputs
-
-  formSubmit = (e) => {
+  useEffect(()=>{
+    resetForm();
+  },[sent]);
+  // When click button submit Form
+  function formSubmit(e){
     e.preventDefault();
-
     let data = {
-      name: this.state.name,
-      lastname: this.state.lastname,
-      email: this.state.email,
-      subject: this.state.subject,
-      message: this.state.message,
+      name: name,
+      lastname:lastname,
+      email: email,
+      subject: subject,
+      message:message,
     };
 
     axios
       .post("/api/forma", data)
       .then((res) => {
-        this.setState(
-          {
-            sent: true,
-          },
-          this.resetForm()
-        );
+        setSent(true);
+        console.log("done sent");
       })
       .catch(() => {
         console.log("message not send");
@@ -86,155 +96,122 @@ export default class Contact extends Component {
   };
 
   // for reseting the form data
-  resetForm = () => {
-    this.setState({
-      name: "",
-      lastname: "",
-      message: "",
-      email: "",
-    });
+  function resetForm() {
+    setName("");
+    setLastName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
 
     setTimeout(() => {
-      this.setState({
-        sent: false,
-      });
+      setSent(false);
     }, 3000);
   };
-  // Scroll Component
-  ScrollIndicator = ()=> {
-    var winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    var height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    var scrolled = ((winScroll / height) * 100);
-    console.log(scrolled);
-    // this.setState({valueScroll:scrolled})
-  }
-  render() {
-    // Loading Pre
-    setTimeout(() => {
-      this.setState({
-        isLoading: false
-      })
-    }, 1500);
-    function changePreLoader(value) {
-      if (value === false) {
-        return "preloader opacity-0";
-      } else return "preloader";
-    }
-    // Scroll Component
-    window.onscroll =function () {
-      // this.ScrollIndicator();
-    };
-    
-    var scroll = this.state.valueScroll;
-    return (
-      <>
-        <div className={changePreLoader(this.state.isLoading)}>
-          <div className="loader">
-            <img src={Rocket} alt="RocketLoading" width="70px" />
+  return (
+    <>
+      <div className={changePreLoader(isLoading)}>
+        <div className="loader">
+          <img src={Rocket} alt="RocketLoading" width="70px" />
+        </div>
+      </div>
+      <div
+        className="header-scroll"
+        style={{ marginLeft: "0px", padding: "0px" }}
+      >
+        <div className="progress-container">
+          <div
+            className="progress-bar-scroll"
+            id="myBar"
+            style={{ width: valueScroll.toString() + "%" }}
+          ></div>
+        </div>
+      </div>
+      {/* Content Contact */}
+      <section className="portfolio section-portfolio">
+        <div className="row-about">
+          <div className="section-title padd-15">
+            <h2>Contact Me</h2>
           </div>
         </div>
-        <div
-          className="header-scroll"
-          style={{ marginLeft: "0px", padding: "0px" }}
-        >
-          <div className="progress-container">
-            <div
-              className="progress-bar-scroll"
-              id="myBar"
-              style={{ width: window.onscroll(document.body.scrollTop/(document.documentElement.scrollHeight -
-                document.documentElement.clientHeight)*100) + "%" }}
-            ></div>   
-          </div>
-        </div>
-        {/* Content Contact */}
-        <section className="portfolio section-portfolio">
-          <div className="row-about">
-            <div className="section-title padd-15">
-              <h2>Contact Me</h2>
-            </div>
-          </div>
-          <div className="row-about content-contact">
-            <div className="containerContact">
-              <div className="contactInfo">
-                <div>
-                  <h2>Contact Info</h2>
-                  <ul className="info">
-                    <li>
-                      <span><FontAwesomeIcon className="icon-info-contact" icon={faPhone} /></span>
-                      <span>(+84) 332.858.127</span>
-                    </li>
-                    <li>
-                      <span><FontAwesomeIcon className="icon-info-contact" icon={faMapMarkerAlt} /></span>
-                      <span>District 9, Ho Chi Minh City</span>
-                    </li>
-                    <li>
-                      <span><FontAwesomeIcon className="icon-info-contact" icon={faEnvelope} /></span>
-                      <span>letangco@gmail.com</span>
-                    </li>
-                  </ul>
-                  <ul className="sci">
-                    <li>
-                      <a href="facebook">
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="facebook">
-                        <i className="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="facebook">
-                        <i className="fa fa-envelope" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="facebook">
-                        <FontAwesomeIcon icon={faBlog} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="contactForm">
-                <h2>Send a Message</h2>
-                <div className="formBox">
-                  <div className="inputBox w50">
-                    <input type="text" name="" required onChange={this.handleName} />
-                    <span>First Name</span>
-                  </div>
-                  <div className="inputBox w50">
-                    <input type="text" name="" required onChange={this.handleLastname} />
-                    <span>Last Name</span>
-                  </div>
-                  <div className="inputBox w50">
-                    <input type="text" name="" required onChange={this.handleEmail} />
-                    <span>Email Address</span>
-                  </div>
-                  <div className="inputBox w50">
-                    <input type="text" name="" required onChange={this.handleSubject} />
-                    <span>Subject</span>
-                  </div>
-                  <div className="inputBox w100">
-                    <textarea name="" required onChange={this.handleMessage}></textarea>
-                    <span>Write your message here...</span>
-                  </div>
-                  <div className="inputBox w100">
-                    <input type="submit" value="Send" onClick={this.formSubmit} />
-                  </div>
-                </div>
+        <div className="row-about content-contact">
+          <div className="containerContact">
+            <div className="contactInfo">
+              <div>
+                <h2>Contact Info</h2>
+                <ul className="info">
+                  <li>
+                    <span><FontAwesomeIcon className="icon-info-contact" icon={faPhone} /></span>
+                    <span>(+84) 332.858.127</span>
+                  </li>
+                  <li>
+                    <span><FontAwesomeIcon className="icon-info-contact" icon={faMapMarkerAlt} /></span>
+                    <span>District 9, Ho Chi Minh City</span>
+                  </li>
+                  <li>
+                    <span><FontAwesomeIcon className="icon-info-contact" icon={faEnvelope} /></span>
+                    <span>letangco@gmail.com</span>
+                  </li>
+                </ul>
+                <ul className="sci">
+                  <li>
+                    <a href="facebook">
+                      <i className="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="facebook">
+                      <i className="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="facebook">
+                      <i className="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="facebook">
+                      <FontAwesomeIcon icon={faBlog} />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
 
+            <div className="contactForm">
+              <h2>Send a Message</h2>
+              <div className="formBox">
+                <div className="inputBox w50">
+                  <input type="text" name="name" value={name} required onChange={handleName} />
+                  <span>First Name</span>
+                </div>
+                <div className="inputBox w50">
+                  <input type="text" name="lastname" value={lastname} required onChange={handleLastname} />
+                  <span>Last Name</span>
+                </div>
+                <div className="inputBox w50">
+                  <input type="email" name="email" value={email} required onChange={handleEmail} />
+                  <span>Email Address</span>
+                </div>
+                <div className="inputBox w50">
+                  <input type="text" name="subject" value={subject} required onChange={handleSubject} />
+                  <span>Subject</span>
+                </div>
+                <div className="inputBox w100">
+                  <textarea name="message" value={message} required onChange={handleMessage}></textarea>
+                  <span>Write your message here...</span>
+                </div>
+                <div className="inputBox w100">
+                  <input type="submit" value="Send" onClick={formSubmit} />
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
+
+        </div>
+      </section>
 
 
-      </>
-    );
-  }
+    </>
+  );
 }
+export default Contact;
