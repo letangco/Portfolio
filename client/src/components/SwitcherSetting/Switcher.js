@@ -3,7 +3,8 @@ import "./Switcher.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import Language from "../Language/Language";
-function Switcher() {
+function Switcher(props) {
+  // Open Button Setting
   const [classBtnSetting, setSetting] = useState(false);
   function setStateBtnSetting() {
     setSetting(!classBtnSetting);
@@ -12,6 +13,14 @@ function Switcher() {
     if (value === false) return "style-switcher closeSwitcherSetting";
     else return "style-switcher openSwitcherSetting";
   }
+  // Button Change Color Button
+  const [btnColor, setColor] = useState("ec1839");
+  function setBtnColor (value)
+  {
+    setColor(value);
+    props.parentCallback(value);
+  }
+  
   return (
     <div className={Open_CloseSetting(classBtnSetting)}>
       <div className="toggle-style-switcher" onClick={setStateBtnSetting}>
@@ -20,29 +29,29 @@ function Switcher() {
       <h5>Style Switcher</h5>
       <ul>
         <li>
-          <a href="a" title="pink" style={{ backgroundColor: "#ec1839" }}>
+          <p style={{ backgroundColor: "#ec1839" }} onClick={()=>{setBtnColor("#ec1839")}}>
             {""}
-          </a>
+          </p>
         </li>
         <li>
-          <a href="a" title="blue" style={{ backgroundColor: "#2196f3" }}>
+          <p style={{ backgroundColor: "#2196f3" }} onClick={()=>{setBtnColor("#2196f3")}}>
             {""}
-          </a>
+          </p>
         </li>
         <li>
-          <a href="a" title="orange" style={{ backgroundColor: "#fa5b0f" }}>
+          <p style={{ backgroundColor: "#fa5b0f" }} onClick={()=>{setBtnColor("#fa5b0f")}}>
             {""}
-          </a>
+          </p>
         </li>
         <li>
-          <a href="a" title="yellow" style={{ backgroundColor: "#ffb400" }}>
+          <p style={{ backgroundColor: "#ffb400" }} onClick={()=>{setBtnColor("#ffb400")}}>
             {""}
-          </a>
+          </p>
         </li>
         <li>
-          <a href="a" title="green" style={{ backgroundColor: "#72b626" }}>
+          <p style={{ backgroundColor: "#72b626" }} onClick={()=>{setBtnColor("#72b626")}}>
             {""}
-          </a>
+          </p>
         </li>
       </ul>
       <h5>Theme</h5>

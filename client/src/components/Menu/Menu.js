@@ -26,21 +26,12 @@ import {
   NavLink,
   Switch,
 } from "react-router-dom";
-// Theme
-// import {ThemeProvider,createGlobalStyle} from 'styled-components';
 
 function Menu() {
   const { t } = useTranslation();
   const [onToggle, setStateToggle] = useState(false);
   const [isLoading, setStateLoading] = useState(true);
-
-  // useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //       setStateLoading(false); // Set lai isLoading sau 2s
-  //     }, 2000);
-  //     return () => clearTimeout(timer);
-  //   }, [isLoading]);
-
+  const [isActive, setIsActive] = useState("home");
   var isSetIsLoading = () => {
     setStateLoading(false);
   };
@@ -69,19 +60,56 @@ function Menu() {
       return "preloader opacity-0";
     } else return "preloader";
   }
+  // Change Button
+  const [btnColor, setBtnColor] = useState("#ec1839");
 
-  //Theme GlobalStyles
-  // const GlobalStyle = createGlobalStyle`
-  //   body{
-  //     background-color: ${props => props.theme.mode === 'dark'?'#111':'#eee'};
-  //     color: ${props => props.theme.mode === 'dark' ? '#eee' : '#111'};
-  //   }
-  // `;
+  function callbackFunction(colorBtn) {
+    setBtnColor(colorBtn)
+  }
+  // Style - Logo
+  function colorLogo(btnColor) {
+    switch (btnColor) {
+      case "#ec1839":
+        return "logo red";
+      case "#2196f3":
+        return "logo blue";
+      case "#fa5b0f":
+        return "logo orange";
+      case "#ffb400":
+        return "logo yellow";
+      case "#72b626":
+        return "logo green";
+      default:
+        break;
+    }
+  }
+  function HoverBtnColor(value) {
+    switch (value) {
+      case "#ec1839":
+        return "btnRedHover";
+      case "#2196f3":
+        return "btnBlueHover";
+      case "#fa5b0f":
+        return "btnOrangeHover";
+      case "#ffb400":
+        return "btnYellowHover";
+      case "#72b626":
+        return "btnGreenHover";
+      default:
+        break;
+    }
+  }
+  function activeBtnColor(button, color) {
+    console.log(button, color);
+    if(button==="home")
+    {
+      
+    }
+  }
+
   return (
     <Router>
-      {/* <ThemeProvider theme={{mode:'dark'}}> */}
       <div>
-        {/* <GlobalStyle /> */}
         <div className={changePreLoader(isLoading)}>
           <div className="loader">
             <img src={Rocket} alt="RocketLoading" width="70px" />
@@ -92,7 +120,7 @@ function Menu() {
           {/* Aside */}
           <div className={transportAside(onToggle)}>
             {/* Logo */}
-            <div className="logo">
+            <div className={colorLogo(btnColor)}>
               <a href="a">LE TANG CO</a>
             </div>
             {/* Nav Toggle btn */}
@@ -103,40 +131,40 @@ function Menu() {
               <span></span>
             </div>
             {/* Nav */}
-            <ul className="nav-menu">
-              <li>
-                <NavLink to="/">
+            <ul className="nav-menu-div">
+              <li onClick={() => { setIsActive("home") }} className={HoverBtnColor(btnColor)}>
+                <NavLink to="/" className={activeBtnColor(isActive, btnColor)}>
                   <FontAwesomeIcon icon={faHome} /> &nbsp;{t("menu.home")}
                 </NavLink>
               </li>
-              <li>
-                <NavLink exact to="/about">
+              <li onClick={() => { setIsActive("about") }} className={HoverBtnColor(btnColor)}>
+                <NavLink exact to="/about" className={activeBtnColor(isActive, btnColor)}>
                   <FontAwesomeIcon icon={faUserTie} /> &nbsp;{" "}
                   {t("menu.aboutme")}
                 </NavLink>
               </li>
-              <li>
-                <NavLink exact to="/portfolio">
+              <li onClick={() => { setIsActive("portfolio") }} className={HoverBtnColor(btnColor)}>
+                <NavLink exact to="/portfolio" className={activeBtnColor(isActive, btnColor)}>
                   <FontAwesomeIcon icon={faBriefcase} /> &nbsp;
                   {t("menu.portfolio")}
                 </NavLink>
               </li>
-              <li>
-                <NavLink exact to="/different">
+              <li onClick={() => { setIsActive("skills") }} className={HoverBtnColor(btnColor)}>
+                <NavLink exact to="/different" className={activeBtnColor(isActive, btnColor)}>
                   <FontAwesomeIcon icon={faPencilRuler} /> &nbsp;
                   {t("menu.otherSkills")}
                 </NavLink>
               </li>
-              <li>
-                <NavLink exact to = '/contact'>
+              <li onClick={() => { setIsActive("contact") }} className={HoverBtnColor(btnColor)}>
+                <NavLink exact to='/contact' className={activeBtnColor(isActive, btnColor)}>
                   <FontAwesomeIcon icon={faComments} /> &nbsp;
                   {t("menu.contact")}
                 </NavLink>
               </li>
-              <li>
-              <NavLink exact to = '/blog'>
+              <li onClick={() => { setIsActive("myblog") }} className={HoverBtnColor(btnColor)}>
+                <NavLink exact to='/blog' className={activeBtnColor(isActive, btnColor)}>
                   <FontAwesomeIcon icon={faBlog} /> &nbsp; {t("menu.myblog")}
-              </NavLink>
+                </NavLink>
               </li>
             </ul>
             {/* CopyRight */}
@@ -161,10 +189,9 @@ function Menu() {
           {/* Main content */}
         </div>
         {/* Switcher Setting */}
-        <Switcher />
+        <Switcher parentCallback={callbackFunction} />
         {/* Main component */}
       </div>
-      {/* </ThemeProvider> */}
     </Router>
   );
 }

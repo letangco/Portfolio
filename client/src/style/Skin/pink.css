@@ -1,17 +1,7 @@
-.aside .logo a::before{
-    border-top: 4px solid #ec1839;
-    border-left: 4px solid  #ec1839;
-}
-.aside .logo a::after{
-    border-bottom: 4px solid #ec1839;
-    border-right: 4px solid  #ec1839;
-}
-.aside .nav-menu li a:hover,
-.aside .nav-menu li a.active{
-    color: #ec1839;
-}
+
 .aside .nav-toggle span{
     background-color: #ec1839;
+    height: 1.5px;
 }
 .aside .nav-toggle span,
 .aside .nav-toggle span::before,
@@ -20,4 +10,87 @@
 .section-title h2::before,
 .section-title h2::after{
     background-color: #ec1839;
+}
+/* Btn Red Logo */
+.aside .logo.red a::before{
+    border-top: 4px solid #ec1839;
+    border-left: 4px solid  #ec1839;
+}
+.aside .logo.red a::after{
+    border-bottom: 4px solid #ec1839;
+    border-right: 4px solid  #ec1839;
+}
+/* Blue */
+.aside .logo.blue a::before{
+    border-top: 4px solid #2196f3 !important;
+    border-left: 4px solid  #2196f3 !important;
+}
+.aside .logo.blue a::after{
+    border-bottom: 4px solid #2196f3 !important;
+    border-right: 4px solid  #2196f3 !important;
+}
+/* Orange */
+.aside .logo.orange a::before{
+    border-top: 4px solid #FA5B0F !important;
+    border-left: 4px solid  #FA5B0F !important;
+}
+.aside .logo.orange a::after{
+    border-bottom: 4px solid #FA5B0F !important;
+    border-right: 4px solid  #FA5B0F !important;
+}
+/* Yellow */
+.aside .logo.yellow a::before{
+    border-top: 4px solid #ffb400 !important;
+    border-left: 4px solid  #ffb400 !important;
+}
+.aside .logo.yellow a::after{
+    border-bottom: 4px solid #ffb400 !important;
+    border-right: 4px solid  #ffb400 !important;
+}
+/* Green */
+.aside .logo.green a::before{
+    border-top: 4px solid #72b626 !important;
+    border-left: 4px solid  #72b626 !important;
+}
+.aside .logo.green a::after{
+    border-bottom: 4px solid #72b626 !important;
+    border-right: 4px solid  #72b626 !important;
+}
+
+/* BtnRed */
+.activeTextMenu{
+    color: #ec1839 !important;
+}
+/* hover Button */
+.aside .nav-menu-div li.btnRedHover a:hover{
+    color: #ec1839;
+}
+.aside .nav-menu-div li.btnBlueHover a:hover{
+    color: #2196f3;
+}
+.aside .nav-menu-div li.btnOrangeHover a:hover{
+    color: #FA5B0F;
+}
+.aside .nav-menu-div li.btnYellowHover a:hover{
+    color: #ffb400;
+}
+.aside .nav-menu-div li.btnGreenHover a:hover{
+    color: #72b626;
+}
+/* active */
+.btnColorRed
+{
+    color: #ec1839 !important;
+}
+.btnColorBlue{
+    color: #2196f3 !important;
+}
+.btnColorOrange{
+    color: #FA5B0F !important;
+}
+.btnColorYellow{
+    color: #ffb400 !important;
+}
+.btnColorGreen{
+    color: #72b626 !important;
 }

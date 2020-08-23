@@ -37,7 +37,7 @@
 .style-switcher ul li{
     display: inline-block;
 }
-.style-switcher ul li a{
+.style-switcher ul li p{
    height: 30px;
    width: 30px;
    display: block;
