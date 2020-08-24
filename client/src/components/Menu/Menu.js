@@ -14,7 +14,6 @@ import "../../style/Preloader.css";
 import About from "../About/About.js";
 import Home from "../Home/Home.js";
 import Differents from "../Differents/Differents";
-import Rocket from "../../image/rocket.png";
 import { useTranslation } from "react-i18next";
 import Switcher from "../SwitcherSetting/Switcher";
 import Portfolio from "../Portfolio/Portfolio";
@@ -26,17 +25,12 @@ import {
   NavLink,
   Switch,
 } from "react-router-dom";
-
 function Menu() {
   const { t } = useTranslation();
   const [onToggle, setStateToggle] = useState(false);
-  const [isLoading, setStateLoading] = useState(true);
   const [isActive, setIsActive] = useState("home");
-  var isSetIsLoading = () => {
-    setStateLoading(false);
-  };
-  setTimeout(isSetIsLoading, 1500);
 
+  // Đóng mở Menu
   function asideSectionToggleBtn() {
     setStateToggle(!onToggle);
   }
@@ -54,11 +48,6 @@ function Menu() {
   function transportSection(value) {
     if (value === true) return "home section open";
     else return "home section";
-  }
-  function changePreLoader(value) {
-    if (value === false) {
-      return "preloader opacity-0";
-    } else return "preloader";
   }
   // Change Button
   const [btnColor, setBtnColor] = useState("#ec1839");
@@ -99,22 +88,9 @@ function Menu() {
         break;
     }
   }
-  function activeBtnColor(button, color) {
-    console.log(button, color);
-    if(button==="home")
-    {
-      
-    }
-  }
-
   return (
     <Router>
       <div>
-        <div className={changePreLoader(isLoading)}>
-          <div className="loader">
-            <img src={Rocket} alt="RocketLoading" width="70px" />
-          </div>
-        </div>
         {/* Main component */}
         <div className="main-container">
           {/* Aside */}
@@ -133,36 +109,36 @@ function Menu() {
             {/* Nav */}
             <ul className="nav-menu-div">
               <li onClick={() => { setIsActive("home") }} className={HoverBtnColor(btnColor)}>
-                <NavLink to="/" className={activeBtnColor(isActive, btnColor)}>
+                <NavLink to="/" style={isActive==="home"?{color:btnColor}:{color:"#302e4d"}}>
                   <FontAwesomeIcon icon={faHome} /> &nbsp;{t("menu.home")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("about") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to="/about" className={activeBtnColor(isActive, btnColor)}>
+                <NavLink exact to="/about" style={isActive==="about"?{color:btnColor}:{color:"#302e4d"}}>
                   <FontAwesomeIcon icon={faUserTie} /> &nbsp;{" "}
                   {t("menu.aboutme")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("portfolio") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to="/portfolio" className={activeBtnColor(isActive, btnColor)}>
+                <NavLink exact to="/portfolio" style={isActive==="portfolio"?{color:btnColor}:{color:"#302e4d"}}>
                   <FontAwesomeIcon icon={faBriefcase} /> &nbsp;
                   {t("menu.portfolio")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("skills") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to="/different" className={activeBtnColor(isActive, btnColor)}>
+                <NavLink exact to="/different" style={isActive==="skills"?{color:btnColor}:{color:"#302e4d"}}>
                   <FontAwesomeIcon icon={faPencilRuler} /> &nbsp;
                   {t("menu.otherSkills")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("contact") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to='/contact' className={activeBtnColor(isActive, btnColor)}>
+                <NavLink exact to='/contact' style={isActive==="contact"?{color:btnColor}:{color:"#302e4d"}}>
                   <FontAwesomeIcon icon={faComments} /> &nbsp;
                   {t("menu.contact")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("myblog") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to='/blog' className={activeBtnColor(isActive, btnColor)}>
+                <NavLink exact to='/blog' style={isActive==="myblog"?{color:btnColor}:{color:"#302e4d"}}>
                   <FontAwesomeIcon icon={faBlog} /> &nbsp; {t("menu.myblog")}
                 </NavLink>
               </li>
@@ -177,9 +153,9 @@ function Menu() {
           <div className="main-content">
             <section className={transportSection(onToggle)}>
               <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/about" exact component={About} />
-                <Route path="/portfolio" exact component={Portfolio} />
+                <Route path="/" exact component={()=><Home btnColor={btnColor}/>} />
+                <Route path="/about" exact component={()=><About btnColorAbout={btnColor}/>} />
+                <Route path="/portfolio" exact component={()=><Portfolio btnColorAbout={btnColor}/>} />
                 <Route path="/different" exact component={Differents} />
                 <Route path="/contact" exact component={Contact} />
                 <Route path="/blog" exact component={Form} />

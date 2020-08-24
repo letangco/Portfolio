@@ -17,21 +17,22 @@ import {
   faIdCardAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import "./About.css";
-function About() {
+function About(props) {
   // Loading
   const [isLoading, setStateLoading] = useState(true);
-  // var isSetIsLoading = () => {
-  //   setStateLoading(false);
-  // };
-  // setTimeout(isSetIsLoading, 1500);
-
+  
   useEffect(() => {
       const timer = setTimeout(() => {
-        setStateLoading(false); // Set lai isLoading sau 2s
-      }, 1500);
+        setStateLoading(false);
+      }, 1000);
       return () => clearTimeout(timer);
-    }, [isLoading]);
-
+    },[props.btnColorAbout]);
+    console.log(isLoading);
+    function changePreLoader(value) {
+      if (value === true) {
+        return "preloader opacity-0";
+      } else return "preloader";
+    }
   // Translation
   const { t } = useTranslation();
   // Scroll
@@ -55,10 +56,22 @@ function About() {
     var age = timeNow.getFullYear() - 1999;
     return age;
   }
-  function changePreLoader(value) {
-    if (value === false) {
-      return "preloader opacity-0";
-    } else return "preloader";
+  // Change Color Button
+  function changeColorTitle(value) {
+    switch (value) {
+      case "#ec1839":
+        return "section-title color-change-title-red";
+      case "#2196f3":
+        return "section-title color-change-title-blue";
+      case "#fa5b0f":
+        return "section-title color-change-title-orange";
+      case "#ffb400":
+        return "section-title color-change-title-yellow";
+      case "#72b626":
+        return "section-title color-change-title-green";
+      default:
+        break;
+    }
   }
   return (
     <>
@@ -82,7 +95,7 @@ function About() {
       <section className="about-section">
         <div className="container">
           <div className="row-about">
-            <div className="section-title">
+            <div className={changeColorTitle(props.btnColorAbout)}>
               <h2>{t('about.namePage')}</h2>
             </div>
           </div>
@@ -92,7 +105,7 @@ function About() {
                 <div className="about-text padd-15">
                   <h3>
                     {t('about.name')} -{" "}
-                    <span style={{ color: "#ec1839" }}>
+                    <span style={{ color: props.btnColorAbout }}>
                       ReactJS Web Developer
                     </span>
                   </h3>
@@ -160,10 +173,10 @@ function About() {
                 {/* Button Download */}
                 <div className="btn-personal-about col-12">
                   <div>
-                    <p>
+                    <p style={{backgroundColor:props.btnColorAbout}}>
                       <FontAwesomeIcon icon={faDownload} /> {t('aboutBtn.downloadCV')}
                     </p>
-                    <p>
+                    <p style={{backgroundColor:props.btnColorAbout}}>
                       <FontAwesomeIcon icon={faIdCardAlt} /> {t('aboutBtn.contact')}
                     </p>
                   </div>

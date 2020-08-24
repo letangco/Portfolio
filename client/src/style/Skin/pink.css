@@ -6,9 +6,9 @@
 .aside .nav-toggle span,
 .aside .nav-toggle span::before,
 .aside .nav-toggle span::after,
-.home .intro .social-links a,
-.section-title h2::before,
-.section-title h2::after{
+/* .home .intro .social-links a, */
+.color-change-title h2::before,
+.color-change-title h2::after{
     background-color: #ec1839;
 }
 /* Btn Red Logo */
@@ -63,19 +63,19 @@
 }
 /* hover Button */
 .aside .nav-menu-div li.btnRedHover a:hover{
-    color: #ec1839;
+    color: #ec1839 !important;
 }
 .aside .nav-menu-div li.btnBlueHover a:hover{
-    color: #2196f3;
+    color: #2196f3 !important;
 }
 .aside .nav-menu-div li.btnOrangeHover a:hover{
-    color: #FA5B0F;
+    color: #FA5B0F !important;
 }
 .aside .nav-menu-div li.btnYellowHover a:hover{
-    color: #ffb400;
+    color: #ffb400 !important;
 }
 .aside .nav-menu-div li.btnGreenHover a:hover{
-    color: #72b626;
+    color: #72b626 !important;
 }
 /* active */
 .btnColorRed

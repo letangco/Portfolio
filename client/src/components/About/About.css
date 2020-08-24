@@ -156,7 +156,7 @@
 }
 .btn-personal-about div p {
   display: inline-block;
-  background-color: #ec1839;
+  /* background-color: #ec1839; */
   height: 45px;
   width: auto;
   padding: 0 20px;
@@ -268,4 +268,26 @@
   .skills-info {
     padding: 0;
   }
+}
+
+/* Change Color Button */
+.color-change-title-red h2::before,
+.color-change-title-red h2::after{
+    background-color: #ec1839;
+}
+.color-change-title-blue h2::before,
+.color-change-title-blue h2::after{
+    background-color: #2196f3;
+}
+.color-change-title-orange h2::before,
+.color-change-title-orange h2::after{
+    background-color: #FA5B0F;
+}
+.color-change-title-yellow h2::before,
+.color-change-title-yellow h2::after{
+    background-color: #ffb400;
+}
+.color-change-title-green h2::before,
+.color-change-title-green h2::after{
+    background-color: #72b626;
 }
