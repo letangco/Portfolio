@@ -54,11 +54,12 @@
   margin: 0 10px;
   color: #302e4d;
   cursor: pointer;
-  border-bottom: 2px solid #ec1839;
+  /* border-bottom: 2px solid #ec1839; */
   white-space: nowrap;
   padding-bottom: 2px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  outline: none;
 }
 .portfolio .portfolio-item {
   /* background-color: red; */

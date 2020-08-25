@@ -1,11 +1,49 @@
-
-.aside .nav-toggle span{
-    background-color: #ec1839;
+/* Menu Toggle Responsive */
+.aside .nav-toggle .toggle-red{
     height: 1.5px;
+    background-color: #ec1839;
 }
-.aside .nav-toggle span,
-.aside .nav-toggle span::before,
-.aside .nav-toggle span::after,
+.aside .nav-toggle .toggle-red::before,
+.aside .nav-toggle .toggle-red::after{
+    background-color: #ec1839;
+    /* height: 1.5px; */
+}
+.aside .nav-toggle .toggle-blue{
+    height: 1.5px;
+    background-color: #2196f3;
+}
+.aside .nav-toggle .toggle-blue::before,
+.aside .nav-toggle .toggle-blue::after{
+    background-color: #2196f3;
+    /* height: 1.5px; */
+}
+.aside .nav-toggle .toggle-orange{
+    height: 1.5px;
+    background-color: #FA5B0F;
+}
+.aside .nav-toggle .toggle-orange::before,
+.aside .nav-toggle .toggle-orange::after{
+    background-color: #FA5B0F;
+    /* height: 1.5px; */
+}
+.aside .nav-toggle .toggle-yellow{
+    height: 1.5px;
+    background-color: #ffb400;
+}
+.aside .nav-toggle .toggle-yellow::before,
+.aside .nav-toggle .toggle-yellow::after{
+    background-color: #ffb400;
+    /* height: 1.5px; */
+}
+.aside .nav-toggle .toggle-green{
+    height: 1.5px;
+    background-color: #72b626;
+}
+.aside .nav-toggle .toggle-green::before,
+.aside .nav-toggle .toggle-green::after{
+    background-color: #72b626;
+    /* height: 1.5px; */
+}
 /* .home .intro .social-links a, */
 .color-change-title h2::before,
 .color-change-title h2::after{

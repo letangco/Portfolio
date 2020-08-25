@@ -9,7 +9,7 @@ function Home(props) {
   // console.log(props.btnColor);
   return (
     <>
-      <PreLoading />
+      {/* <PreLoading /> */}
       <div className="container">
         <div className="intro">
           <img src={Avatar} alt="Image_avatar" className="shadow-dark" />

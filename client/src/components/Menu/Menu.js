@@ -88,6 +88,23 @@ function Menu() {
         break;
     }
   }
+  function changeClassToggleMenu(value)
+  {
+    switch (value) {
+      case "#ec1839":
+        return "toggle-red";
+      case "#2196f3":
+        return "toggle-blue";
+      case "#fa5b0f":
+        return "toggle-orange";
+      case "#ffb400":
+        return "toggle-yellow";
+      case "#72b626":
+        return "toggle-green";
+      default:
+        break;
+    }
+  }
   return (
     <Router>
       <div>
@@ -104,7 +121,7 @@ function Menu() {
               className={transportToggle(onToggle)}
               onClick={asideSectionToggleBtn}
             >
-              <span></span>
+              <span className={changeClassToggleMenu(btnColor)}></span>
             </div>
             {/* Nav */}
             <ul className="nav-menu-div">
@@ -155,7 +172,7 @@ function Menu() {
               <Switch>
                 <Route path="/" exact component={()=><Home btnColor={btnColor}/>} />
                 <Route path="/about" exact component={()=><About btnColorAbout={btnColor}/>} />
-                <Route path="/portfolio" exact component={()=><Portfolio btnColorAbout={btnColor}/>} />
+                <Route path="/portfolio" exact component={()=><Portfolio btnColor={btnColor}/>} />
                 <Route path="/different" exact component={Differents} />
                 <Route path="/contact" exact component={Contact} />
                 <Route path="/blog" exact component={Form} />

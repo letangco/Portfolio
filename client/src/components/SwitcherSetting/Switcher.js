@@ -1,8 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import "./Switcher.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import Language from "../Language/Language";
+function useOutsideAlerter(ref,setSetting) {
+  useEffect(() => {
+      // Xử lý khi click outside
+      function handleClickOutside(event) {
+          if (ref.current && !ref.current.contains(event.target)) {
+              // alert("You clicked outside of me!");
+              setSetting(false);
+          }
+      }
+
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+          // Unbind the event listener on clean up
+          document.removeEventListener("mousedown", handleClickOutside);
+      };
+  }, [ref]);
+}
 function Switcher(props) {
   // Open Button Setting
   const [classBtnSetting, setSetting] = useState(false);
@@ -20,9 +38,11 @@ function Switcher(props) {
     setColor(value);
     props.parentCallback(value);
   }
-  
+  // outside Click
+  const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef,setSetting);
   return (
-    <div className={Open_CloseSetting(classBtnSetting)}>
+    <div className={Open_CloseSetting(classBtnSetting)} ref={wrapperRef}>
       <div className="toggle-style-switcher" onClick={setStateBtnSetting}>
         <i className="fa fa-cog fa-spin"></i>
       </div>

@@ -19,20 +19,18 @@ import {
 import "./About.css";
 function About(props) {
   // Loading
-  const [isLoading, setStateLoading] = useState(true);
-  
+  const [isLoading, setStateLoading] = useState(false);
   useEffect(() => {
-      const timer = setTimeout(() => {
-        setStateLoading(false);
-      }, 1000);
-      return () => clearTimeout(timer);
-    },[props.btnColorAbout]);
-    console.log(isLoading);
-    function changePreLoader(value) {
-      if (value === true) {
-        return "preloader opacity-0";
-      } else return "preloader";
-    }
+    const timer = setTimeout(() => {
+      setStateLoading(false); // Set lai isLoading sau 2s
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
+  function changePreLoader(value) {
+    if (value === false) {
+      return "preloader opacity-0";
+    } else return "preloader";
+  }
   // Translation
   const { t } = useTranslation();
   // Scroll

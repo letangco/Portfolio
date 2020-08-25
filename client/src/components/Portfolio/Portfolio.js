@@ -1,25 +1,25 @@
-import React, { useState, useEffect,lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import Rocket from "../../image/rocket.png";
 // import { useTranslation } from "react-i18next";
 import "./Portfolio.css";
 // import ModelPortfolio from './Modal/ModelPortfolio';
 
 // import Lazy All Component
-const All = lazy(()=> import("./All"));
-const DevDesign =lazy(()=>import("./DevDesign"));
-const Photography =lazy(()=>import("./Photography"));
-const VideoEditing =lazy(()=>import("./VideoEditing"));
-const LogoDesign =lazy(()=>import("./LogoDesign"));
+const All = lazy(() => import("./All"));
+const DevDesign = lazy(() => import("./DevDesign"));
+const Photography = lazy(() => import("./Photography"));
+const VideoEditing = lazy(() => import("./VideoEditing"));
+const LogoDesign = lazy(() => import("./LogoDesign"));
 
-function Portfolio() {
+function Portfolio(props) {
   // Translation
   // const { t } = useTranslation();
   // Pre loading Component
-  const [isLoading, setStateLoading] = useState(true);
+  const [isLoading, setStateLoading] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
       setStateLoading(false); // Set lai isLoading sau 2s
-    }, 2500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [isLoading]);
   function changePreLoader(value) {
@@ -48,19 +48,38 @@ function Portfolio() {
   function renderSeclect(value) {
     switch (value) {
       case "all":
-        return (<Suspense fallback={<>Loading All</>}><All/></Suspense>);
+        return (<Suspense fallback={<>Loading All</>}><All /></Suspense>);
       case "webDesign":
-        return (<Suspense fallback={<>Loading Web Design</>}><DevDesign/></Suspense>);
+        return (<Suspense fallback={<>Loading Web Design</>}><DevDesign /></Suspense>);
       case "photography":
-        return (<Suspense fallback={<>Loading Photography</>}><Photography/></Suspense>);
+        return (<Suspense fallback={<>Loading Photography</>}><Photography /></Suspense>);
       case "videoEditing":
-        return (<Suspense fallback={<>Loading Video Editing</>}><VideoEditing/></Suspense>);
+        return (<Suspense fallback={<>Loading Video Editing</>}><VideoEditing /></Suspense>);
       case "logoDesign":
-        return (<Suspense fallback={<>Loading LogoDesign</>}><LogoDesign/></Suspense>);
+        return (<Suspense fallback={<>Loading LogoDesign</>}><LogoDesign /></Suspense>);
       default:
         break;
     }
   }
+  // Change Title Color
+  function changeColorTitle(value) {
+    switch (value) {
+      case "#ec1839":
+        return "section-title padd-15 color-change-title-red";
+      case "#2196f3":
+        return "section-title padd-15 color-change-title-blue";
+      case "#fa5b0f":
+        return "section-title padd-15 color-change-title-orange";
+      case "#ffb400":
+        return "section-title padd-15 color-change-title-yellow";
+      case "#72b626":
+        return "section-title padd-15 color-change-title-green";
+      default:
+        break;
+    }
+  }
+  // Active SelectList
+
   return (
     <>
       <div className={changePreLoader(isLoading)}>
@@ -83,7 +102,7 @@ function Portfolio() {
       {/* <ModelPortfolio /> */}
       <section className="portfolio section-portfolio">
         <div className="row-about">
-          <div className="section-title padd-15">
+          <div className={changeColorTitle(props.btnColor)}>
             <h2>Portfolio</h2>
           </div>
         </div>
@@ -93,7 +112,9 @@ function Portfolio() {
               type="button"
               onClick={() => {
                 setSelectPortfolio("all");
+                
               }}
+              style={activeSelectPorfolio==="all"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
               All
             </button>
@@ -102,6 +123,7 @@ function Portfolio() {
               onClick={() => {
                 setSelectPortfolio("webDesign");
               }}
+              style={activeSelectPorfolio==="webDesign"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
               Web Design
             </button>
@@ -110,6 +132,7 @@ function Portfolio() {
               onClick={() => {
                 setSelectPortfolio("photography");
               }}
+              style={activeSelectPorfolio==="photography"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
               Photography
             </button>
@@ -118,6 +141,7 @@ function Portfolio() {
               onClick={() => {
                 setSelectPortfolio("videoEditing");
               }}
+              style={activeSelectPorfolio==="videoEditing"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
               Video Editing
             </button>
@@ -126,6 +150,7 @@ function Portfolio() {
               onClick={() => {
                 setSelectPortfolio("logoDesign");
               }}
+              style={activeSelectPorfolio==="logoDesign"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
               Logo Design
             </button>
