@@ -18,7 +18,7 @@ function useOutsideAlerter(ref,setSetting) {
           // Unbind the event listener on clean up
           document.removeEventListener("mousedown", handleClickOutside);
       };
-  }, [ref]);
+  }, [ref,setSetting]);
 }
 function Switcher(props) {
   // Open Button Setting
@@ -32,6 +32,7 @@ function Switcher(props) {
   }
   // Button Change Color Button
   const [btnColor, setColor] = useState("ec1839");
+  console.log(btnColor);
   function setBtnColor (value)
   {
     setColor(value);
@@ -40,6 +41,14 @@ function Switcher(props) {
   // outside Click
   const wrapperRef = useRef(null);
     useOutsideAlerter(wrapperRef,setSetting);
+  // Theme 
+  // true => light
+  // false => dark
+  const [switchTheme,setTheme] = useState(true);
+  function onClickSetTheme(value){
+    setTheme(!value);
+    props.onHandleTheme(!value);
+  }
   return (
     <div className={Open_CloseSetting(classBtnSetting)} ref={wrapperRef}>
       <div className="toggle-style-switcher" onClick={setStateBtnSetting}>
@@ -76,7 +85,7 @@ function Switcher(props) {
       <h5>Theme</h5>
       <div className="ThemeSwitch">
         <input type="checkbox" className="checkboxTheme" id="chk" />
-        <label className="labelTheme" htmlFor="chk">
+        <label className="labelTheme" htmlFor="chk" onClick={()=>onClickSetTheme(switchTheme)}>
           <FontAwesomeIcon icon={faMoon} />
           <FontAwesomeIcon icon={faSun} />
           <div className="ball"></div>

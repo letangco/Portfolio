@@ -83,6 +83,51 @@ function Differents(props) {
         break;
     }
   }
+  // Change Color Theme on Box
+  const BoxTheme = {
+    "dark": {
+      backgroundColor: "#222222",
+      border: "1px solid #393939"
+    },
+    "light": {
+      backgroundColor: "#fdf9ff",
+      border: "1px solid #e8dfec"
+    }
+  }
+  function changeBgColorBox(value) {
+    if (value === "dark")
+      return BoxTheme.dark;
+    else return BoxTheme.light;
+  }
+  // Change Text Theme on Box
+  const TextTheme = {
+    "heading":{
+      "dark": {
+        color:"#ffffff"
+      },
+      "light": {
+        color:"#302e4d"
+      }
+    },
+    "text":{
+      "dark": {
+        color:"#e9e9e9"
+      },
+      "light": {
+        color:"#504e70"
+      }
+    }
+  }
+  function changeColorHeading(value){
+    if (value === "dark")
+      return TextTheme.heading.dark;
+    else return TextTheme.heading.light;
+  }
+  function changeColorText(value){
+    if (value === "dark")
+      return TextTheme.text.dark;
+    else return TextTheme.text.light;
+  }
   return (
     <>
       {/* Loading */}
@@ -108,14 +153,14 @@ function Differents(props) {
       <section className="different-section">
         <div className="row-different">
           <div className={changeColorTitle(props.btnColor)}>
-            <h2>{t('otherSkills.titlePage.otherSkills')}</h2>
+            <h2 style={props.theme === "dark" ? { color: "#ffffff" } : { color: "#302e4d" }}>{t('otherSkills.titlePage.otherSkills')}</h2>
           </div>
         </div>
 
         <div className="container-fluid otherSkills">
           <div className="row list-other-skill">
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
-              <div>
+              <div style={changeBgColorBox(props.theme)}>
                 <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon
                     className="faIconItem"
@@ -123,64 +168,64 @@ function Differents(props) {
                     size="2x"
                   />
                 </p>
-                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.webDesign')}</h3>
-                <p>
+                <h3 className={changeColorLineBox(props.btnColor)} style={changeColorHeading(props.theme)}>{t('otherSkills.title.webDesign')}</h3>
+                <p style={changeColorText(props.theme)}>
                   {t('otherSkills.content.webDesign')}
                 </p>
               </div>
             </div>
 
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
-              <div>
+              <div style={changeBgColorBox(props.theme)}>
                 <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faCameraRetro} size="2x" />
                 </p>
-                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.photography')}</h3>
-                <p>
+                <h3 className={changeColorLineBox(props.btnColor)} style={changeColorHeading(props.theme)}>{t('otherSkills.title.photography')}</h3>
+                <p style={changeColorText(props.theme)}>
                   {t('otherSkills.content.photography')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
-              <div>
+              <div style={changeBgColorBox(props.theme)}>
                 <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faCode} size="2x" />
                 </p>
-                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.webDeveloper')}</h3>
-                <p>
+                <h3 className={changeColorLineBox(props.btnColor)} style={changeColorHeading(props.theme)}>{t('otherSkills.title.webDeveloper')}</h3>
+                <p style={changeColorText(props.theme)}>
                   {t('otherSkills.content.webDeveloper')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
-              <div>
+              <div style={changeBgColorBox(props.theme)}>
                 <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faFilm} size="2x" />
                 </p>
-                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.videoEditing')}</h3>
-                <p>
+                <h3 className={changeColorLineBox(props.btnColor)} style={changeColorHeading(props.theme)}>{t('otherSkills.title.videoEditing')}</h3>
+                <p style={changeColorText(props.theme)}>
                   {t('otherSkills.content.videoEditing')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
-              <div>
+              <div style={changeBgColorBox(props.theme)}>
                 <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faRocket} size="2x" />
                 </p>
-                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.SEOOptimization')}</h3>
-                <p>
+                <h3 className={changeColorLineBox(props.btnColor)} style={changeColorHeading(props.theme)}>{t('otherSkills.title.SEOOptimization')}</h3>
+                <p style={changeColorText(props.theme)}>
                   {t('otherSkills.content.SEOOptimization')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
-              <div>
+              <div style={changeBgColorBox(props.theme)}>
                 <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faPalette} size="2x" />
                 </p>
-                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.logoDesign')}</h3>
-                <p>
+                <h3 className={changeColorLineBox(props.btnColor)} style={changeColorHeading(props.theme)}>{t('otherSkills.title.logoDesign')}</h3>
+                <p style={changeColorText(props.theme)}>
                   {t('otherSkills.content.logoDesign')}
                 </p>
               </div>

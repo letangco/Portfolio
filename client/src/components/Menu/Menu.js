@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -25,6 +25,7 @@ import {
   NavLink,
   Switch,
 } from "react-router-dom";
+import '../../style/Skin/Theme.css';
 function Menu() {
   const { t } = useTranslation();
   const [onToggle, setStateToggle] = useState(false);
@@ -88,8 +89,7 @@ function Menu() {
         break;
     }
   }
-  function changeClassToggleMenu(value)
-  {
+  function changeClassToggleMenu(value) {
     switch (value) {
       case "#ec1839":
         return "toggle-red";
@@ -105,16 +105,47 @@ function Menu() {
         break;
     }
   }
+  // Lay gia tri theme tu Switcher
+  const [theme, setTheme] = useState("light");
+  const [asideTheme, setAsideTheme] = useState("#fdf9ff");
+  function onHandleTheme(value) {
+    // value === true ? setTheme("light") : setTheme("dark")
+    if(value){
+      setTheme("light");
+      setAsideTheme("#fdf9ff");
+    }
+    else {
+      setTheme("dark");
+      setAsideTheme("#222222");
+    }
+  }
+  console.log(theme,asideTheme)
+  const Heading = {
+    "dark":"#ffffff",
+    "light":"#302e4d"
+  };
+  const borderBottom = {
+    "dark":{
+      borderBottom: "1px solid #393939",
+      color: "#ffffff"
+    },
+    "light":{
+      borderBottom: "1px solid #e8dfec",
+      color: "#302e4d"
+    }
+  }
   return (
     <Router>
       <div>
         {/* Main component */}
         <div className="main-container">
           {/* Aside */}
-          <div className={transportAside(onToggle)}>
+          <div className={transportAside(onToggle)} style={theme==="dark"?{backgroundColor:asideTheme,borderRight:"1px solid #393939"}:{backgroundColor:asideTheme,borderRight:"1px solid #e8dfec"}}>
             {/* Logo */}
             <div className={colorLogo(btnColor)}>
-              <a href="a">LE TANG CO</a>
+              <NavLink exact to="/" style={theme==="dark"?{color:Heading.dark}:{color:Heading.light}}>
+                LE TANG CO
+              </NavLink>
             </div>
             {/* Nav Toggle btn */}
             <div
@@ -126,36 +157,42 @@ function Menu() {
             {/* Nav */}
             <ul className="nav-menu-div">
               <li onClick={() => { setIsActive("home") }} className={HoverBtnColor(btnColor)}>
-                <NavLink to="/" style={isActive==="home"?{color:btnColor}:{color:"#302e4d"}}>
+                <NavLink to="/" style={isActive === "home" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
+                (theme==="dark"?borderBottom.dark:borderBottom.light)}>
                   <FontAwesomeIcon icon={faHome} /> &nbsp;{t("menu.home")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("about") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to="/about" style={isActive==="about"?{color:btnColor}:{color:"#302e4d"}}>
+                <NavLink exact to="/about" style={isActive === "about" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
+                (theme==="dark"?borderBottom.dark:borderBottom.light)}>
                   <FontAwesomeIcon icon={faUserTie} /> &nbsp;{" "}
                   {t("menu.aboutme")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("portfolio") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to="/portfolio" style={isActive==="portfolio"?{color:btnColor}:{color:"#302e4d"}}>
+                <NavLink exact to="/portfolio" style={isActive === "portfolio" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
+                (theme==="dark"?borderBottom.dark:borderBottom.light)}>
                   <FontAwesomeIcon icon={faBriefcase} /> &nbsp;
                   {t("menu.portfolio")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("skills") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to="/different" style={isActive==="skills"?{color:btnColor}:{color:"#302e4d"}}>
+                <NavLink exact to="/different" style={isActive === "skills" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
+                (theme==="dark"?borderBottom.dark:borderBottom.light)}>
                   <FontAwesomeIcon icon={faPencilRuler} /> &nbsp;
                   {t("menu.otherSkills")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("contact") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to='/contact' style={isActive==="contact"?{color:btnColor}:{color:"#302e4d"}}>
+                <NavLink exact to='/contact' style={isActive === "contact" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
+                (theme==="dark"?borderBottom.dark:borderBottom.light)}>
                   <FontAwesomeIcon icon={faComments} /> &nbsp;
                   {t("menu.contact")}
                 </NavLink>
               </li>
               <li onClick={() => { setIsActive("myblog") }} className={HoverBtnColor(btnColor)}>
-                <NavLink exact to='/blog' style={isActive==="myblog"?{color:btnColor}:{color:"#302e4d"}}>
+                <NavLink exact to='/blog' style={isActive === "myblog" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
+                (theme==="dark"?borderBottom.dark:borderBottom.light)}>
                   <FontAwesomeIcon icon={faBlog} /> &nbsp; {t("menu.myblog")}
                 </NavLink>
               </li>
@@ -168,13 +205,13 @@ function Menu() {
           {/* Aside */}
           {/* Main content */}
           <div className="main-content">
-            <section className={transportSection(onToggle)}>
+            <section className={transportSection(onToggle)} style={theme==="dark"?{backgroundColor:"#151515"}:{}}>
               <Switch>
-                <Route path="/" exact component={()=><Home btnColor={btnColor}/>} />
-                <Route path="/about" exact component={()=><About btnColorAbout={btnColor}/>} />
-                <Route path="/portfolio" exact component={()=><Portfolio btnColor={btnColor}/>} />
-                <Route path="/different" exact component={()=><Differents btnColor={btnColor}/>}/>
-                <Route path="/contact" exact component={()=><Contact btnColor={btnColor}/>} />
+                <Route path="/" exact component={() => <Home btnColor={btnColor} theme={theme}/>} />
+                <Route path="/about" exact component={() => <About btnColorAbout={btnColor} theme={theme}/>} />
+                <Route path="/portfolio" exact component={() => <Portfolio btnColor={btnColor} theme={theme}/>} />
+                <Route path="/different" exact component={() => <Differents btnColor={btnColor} theme={theme}/>} />
+                <Route path="/contact" exact component={() => <Contact btnColor={btnColor} theme={theme} />} />
                 <Route path="/blog" exact component={Form} />
               </Switch>
             </section>
@@ -182,7 +219,7 @@ function Menu() {
           {/* Main content */}
         </div>
         {/* Switcher Setting */}
-        <Switcher parentCallback={callbackFunction} />
+        <Switcher parentCallback={callbackFunction} onHandleTheme={onHandleTheme} />
         {/* Main component */}
       </div>
     </Router>

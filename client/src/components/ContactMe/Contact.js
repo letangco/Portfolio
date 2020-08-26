@@ -140,7 +140,6 @@ function Contact(props) {
         break;
     }
   }
-
   return (
     <>
       <div className={changePreLoader(isLoading)}>
@@ -164,12 +163,12 @@ function Contact(props) {
       <section className="portfolio section-portfolio">
         <div className="row-about">
           <div className={changeColorTitle(props.btnColor)}>
-  <h2>{t('contactMe.titlePage')}</h2>
+            <h2 style={props.theme==="dark"?{color:"#ffffff"}:{color:"#302e4d"}}>{t('contactMe.titlePage')}</h2>
           </div>
         </div>
         <div className="row-about content-contact">
           <div className="containerContact">
-            <div className="contactInfo" style={{backgroundColor:props.btnColor}}>
+            <div className="contactInfo" style={{ backgroundColor: props.btnColor }}>
               <div>
                 <h2>{t('contactMe.contactInfo')}</h2>
                 <ul className="info">
@@ -179,7 +178,7 @@ function Contact(props) {
                   </li>
                   <li>
                     <span><FontAwesomeIcon className="icon-info-contact" icon={faMapMarkerAlt} /></span>
-  <span>{t('contactMe.address')}</span>
+                    <span>{t('contactMe.address')}</span>
                   </li>
                   <li>
                     <span><FontAwesomeIcon className="icon-info-contact" icon={faEnvelope} /></span>
@@ -211,46 +210,46 @@ function Contact(props) {
               </div>
             </div>
 
-            <div className="contactForm">
-              <h2>{t('contactMe.sendAMessage')}</h2>
+            <div className="contactForm" style={props.theme==="dark"?{backgroundColor:"#222222",border:"1px solid #393939"}:{backgroundColor:"rgb(253, 249, 255)",border:"1px solid #e8dfec"}}>
+              <h2 style={props.theme==="dark"?{color:"#ffffff"}:{color:"#302e4d"}}>{t('contactMe.sendAMessage')}</h2>
               <div className="formBox">
                 <div className="inputBox w50">
-                  <input type="text" name="name" value={name} required onChange={handleName} />
-                  <span>{t('contactMe.firstName')}</span>
+                  <input type="text" name="name" value={name} required onChange={handleName} style={props.theme==="dark"?{color:props.btnColor}:{}}/>
+                  <span style={props.theme==="dark"?{color:"#e9e9e9"}:{}}>{t('contactMe.firstName')}</span>
                   <p className={name ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w50">
-                  <input type="text" name="lastname" value={lastname} required onChange={handleLastname} />
-                  <span>{t('contactMe.lastName')}</span>
+                  <input type="text" name="lastname" value={lastname} required onChange={handleLastname} style={props.theme==="dark"?{color:props.btnColor}:{}}/>
+                  <span style={props.theme==="dark"?{color:"#e9e9e9"}:{}}>{t('contactMe.lastName')}</span>
                   <p className={lastname ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w50">
-                  <input type="text" name="email" value={email} required onChange={handleEmail} />
-                  <span>{t('contactMe.emailAddress')}</span>
+                  <input type="text" name="email" value={email} required onChange={handleEmail} style={props.theme==="dark"?{color:props.btnColor}:{}}/>
+                  <span style={props.theme==="dark"?{color:"#e9e9e9"}:{}}>{t('contactMe.emailAddress')}</span>
                   <p className={email ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w50">
-                  <input type="text" name="subject" value={subject} required onChange={handleSubject} />
-                  <span>{t('contactMe.subject')}</span>
+                  <input type="text" name="subject" value={subject} required onChange={handleSubject} style={props.theme==="dark"?{color:props.btnColor}:{}}/>
+                  <span style={props.theme==="dark"?{color:"#e9e9e9"}:{}}>{t('contactMe.subject')}</span>
                   <p className={subject ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w100">
-                  <textarea name="message" value={message} required onChange={handleMessage}></textarea>
-                  <span>{t('contactMe.writeYourMessage')}</span>
+                  <textarea name="message" value={message} required onChange={handleMessage} style={props.theme==="dark"?{color:props.btnColor}:{}}></textarea>
+                  <span style={props.theme==="dark"?{color:"#e9e9e9"}:{}}>{t('contactMe.writeYourMessage')}</span>
                   <p className={message ? "spaceCharMessage displayNone" : "spaceCharMessage"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w100">
-                  <input type="submit" value={t('contactMe.send')} onClick={formSubmit} style={{backgroundColor:props.btnColor}}/>
+                  <input type="submit" value={t('contactMe.send')} onClick={formSubmit} style={{ backgroundColor: props.btnColor }} />
                 </div>
               </div>
             </div>

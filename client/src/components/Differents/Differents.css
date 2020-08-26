@@ -12,7 +12,7 @@
 }
 .different-section .section-title h2 {
   font-size: 30px;
-  color: #302e4d;
+  /* color: #302e4d; */
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   margin: 0;
@@ -103,7 +103,7 @@
 .other-item div {
   border: 1px solid #e8dfec;
   border-radius: 10px;
-  background-color: #fdf9ff;
+  /* background-color: #fdf9ff; */
   padding: 25px 10px 20px 10px;
   display: inline-block;
   align-items: center;

@@ -110,14 +110,14 @@
 .content-contact .containerContact .contactForm{
   position: absolute;
   padding: 70px 50px;
-  background: #fff;
+  /* background: #fff; */
   margin-left: 150px;
   padding-left: 250px;
   width: calc(100% -150px); 
   /* box-shadow: 0 20px 0 20px rgba(0, 0, 0, 0.5); */
 }
 .content-contact .containerContact .contactForm h2{
-  color: #0f3959;
+  /* color: #0f3959; */
   font-size: 24px;
   font-weight: 500;
 }
@@ -149,10 +149,11 @@
   border: none;
   border-bottom: 1px solid #777;
   outline: none;
+  background: transparent;
 }
 .content-contact .containerContact .contactForm .formBox .inputBox textarea{
   min-height: 120px;
-  background: #eeeedd;
+  background: transparent;
 }
 .content-contact .containerContact .contactForm .formBox .inputBox span{
   position: absolute;
