@@ -1,6 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import Rocket from "../../image/rocket.png";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import "./Portfolio.css";
 // import ModelPortfolio from './Modal/ModelPortfolio';
 
@@ -13,7 +13,7 @@ const LogoDesign = lazy(() => import("./LogoDesign"));
 
 function Portfolio(props) {
   // Translation
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   // Pre loading Component
   const [isLoading, setStateLoading] = useState(false);
   useEffect(() => {
@@ -103,7 +103,7 @@ function Portfolio(props) {
       <section className="portfolio section-portfolio">
         <div className="row-about">
           <div className={changeColorTitle(props.btnColor)}>
-            <h2>Portfolio</h2>
+  <h2>{t('portfolio.portfolio')}</h2>
           </div>
         </div>
         <div className="row-about content-portfolio">
@@ -116,7 +116,8 @@ function Portfolio(props) {
               }}
               style={activeSelectPorfolio==="all"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
-              All
+              {/* All */}
+              {t('portfolio.all')}
             </button>
             <button
               type="button"
@@ -125,7 +126,8 @@ function Portfolio(props) {
               }}
               style={activeSelectPorfolio==="webDesign"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
-              Web Design
+              {/* Web Design */}
+              {t('portfolio.webDesign')}
             </button>
             <button
               type="button"
@@ -134,7 +136,7 @@ function Portfolio(props) {
               }}
               style={activeSelectPorfolio==="photography"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
-              Photography
+              {t('portfolio.Photography')}
             </button>
             <button
               type="button"
@@ -143,7 +145,7 @@ function Portfolio(props) {
               }}
               style={activeSelectPorfolio==="videoEditing"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
-              Video Editing
+              {t('portfolio.videoEditing')}
             </button>
             <button
               type="button"
@@ -152,7 +154,7 @@ function Portfolio(props) {
               }}
               style={activeSelectPorfolio==="logoDesign"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
             >
-              Logo Design
+              {t('portfolio.logoDesign')}
             </button>
           </div>
 

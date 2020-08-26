@@ -10,9 +10,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Differents.css";
 import Rocket from "../../image/rocket.png";
-function Differents() {
+import { useTranslation } from "react-i18next";
+function Differents(props) {
+  // Translation
+  const { t } = useTranslation();
   // PreLoading Component
-  const [isLoading, setStateLoading] = useState(true);
+  const [isLoading, setStateLoading] = useState(false);
   // var isSetIsLoading = () => {
   //   setStateLoading(false);
   // };
@@ -46,6 +49,40 @@ function Differents() {
     setScrollValue(scrolled);
     // document.getElementById("myBar").style.width = scrolled + "%";
   }
+  // Change Title Color
+  function changeColorTitle(value) {
+    switch (value) {
+      case "#ec1839":
+        return "section-title color-change-title-red";
+      case "#2196f3":
+        return "section-title color-change-title-blue";
+      case "#fa5b0f":
+        return "section-title color-change-title-orange";
+      case "#ffb400":
+        return "section-title color-change-title-yellow";
+      case "#72b626":
+        return "section-title color-change-title-green";
+      default:
+        break;
+    }
+  }
+  // Change LineColor Box
+  function changeColorLineBox(value) {
+    switch (value) {
+      case "#ec1839":
+        return "line-red";
+      case "#2196f3":
+        return "line-blue";
+      case "#fa5b0f":
+        return "line-orange";
+      case "#ffb400":
+        return "line-yellow";
+      case "#72b626":
+        return "line-green";
+      default:
+        break;
+    }
+  }
   return (
     <>
       {/* Loading */}
@@ -70,8 +107,8 @@ function Differents() {
       {/* Content */}
       <section className="different-section">
         <div className="row-different">
-          <div className="section-title">
-            <h2>Other Skills</h2>
+          <div className={changeColorTitle(props.btnColor)}>
+            <h2>{t('otherSkills.titlePage.otherSkills')}</h2>
           </div>
         </div>
 
@@ -79,79 +116,72 @@ function Differents() {
           <div className="row list-other-skill">
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
               <div>
-                <p className="icon-other-item">
+                <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon
                     className="faIconItem"
                     icon={faLaptopCode}
                     size="2x"
                   />
                 </p>
-                <h3>Web Design</h3>
+                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.webDesign')}</h3>
                 <p>
-                  Web design makes the website more attractive and eye-catching.
-                  Perform UX / UI optimization work
+                  {t('otherSkills.content.webDesign')}
                 </p>
               </div>
             </div>
 
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
               <div>
-                <p className="icon-other-item">
+                <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faCameraRetro} size="2x" />
                 </p>
-                <h3>Photography</h3>
+                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.photography')}</h3>
                 <p>
-                  Photography can only reproduce reality. But as soon as it is
-                  captured, that reality becomes part of the past
+                  {t('otherSkills.content.photography')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
               <div>
-                <p className="icon-other-item">
+                <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faCode} size="2x" />
                 </p>
-                <h3>Web Developer</h3>
+                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.webDeveloper')}</h3>
                 <p>
-                  Well-known developers all run into dilemmas until they solve
-                  it
+                  {t('otherSkills.content.webDeveloper')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
               <div>
-                <p className="icon-other-item">
+                <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faFilm} size="2x" />
                 </p>
-                <h3>Video Editing</h3>
+                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.videoEditing')}</h3>
                 <p>
-                  I've never been a big fan of the music-video style of editing
-                  movies that crept in the last few decades
+                  {t('otherSkills.content.videoEditing')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
               <div>
-                <p className="icon-other-item">
+                <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faRocket} size="2x" />
                 </p>
-                <h3>SEO Optimization</h3>
+                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.SEOOptimization')}</h3>
                 <p>
-                  All top rankings have search engine optimization methods to
-                  get ranked higher
+                  {t('otherSkills.content.SEOOptimization')}
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 other-item">
               <div>
-                <p className="icon-other-item">
+                <p className="icon-other-item" style={{ backgroundColor: props.btnColor }}>
                   <FontAwesomeIcon icon={faPalette} size="2x" />
                 </p>
-                <h3>Logo Design</h3>
+                <h3 className={changeColorLineBox(props.btnColor)}>{t('otherSkills.title.logoDesign')}</h3>
                 <p>
-                  Logo is not only the representative image of an organization
-                  but also a message that its owner wants to send to the
-                  community.
+                  {t('otherSkills.content.logoDesign')}
                 </p>
               </div>
             </div>

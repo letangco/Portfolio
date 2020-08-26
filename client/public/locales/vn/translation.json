@@ -72,5 +72,46 @@
         "box2":"DỰ ÁN ĐÃ HOÀN THÀNH",
         "box3":"KHÁCH HÀNG HÀI LÒNG",
         "box4":"GIẢI THƯỞNG"
+    },
+    "portfolio":{
+        "portfolio":"Dự án",
+        "all": "Tất cả",
+        "webDesign":"Thiết kế Web",
+        "Photography": "Nhiếp ảnh",
+        "videoEditing": "Sửa Video",
+        "logoDesign": "Thiết kế Logo"
+    },
+    "otherSkills":{
+        "titlePage":{
+            "otherSkills":"Kỹ Năng Khác"
+        },
+        "title":{
+            "webDesign": "Web Design",
+            "photography":"Nhiếp ảnh",
+            "webDeveloper":"Phát triển Web",
+            "videoEditing":"Sửa Video",
+            "SEOOptimization":"Tối ưu SEO",
+            "logoDesign":"Thiết kế Logo"
+        },
+        "content":{
+            "webDesign":"Thiết kế web làm cho trang web trở nên hấp dẫn và bắt mắt hơn. Thực hiện công việc tối ưu hóa UI/UX",
+            "photography":"Nhiếp ảnh chỉ có thể tái tạo hiện thực. Nhưng ngay sau khi nó được nắm bắt, thực tế đó đã trở thành một phần của quá khứ",
+            "webDeveloper":"Các nhà phát triển nổi tiếng đều rơi vào tình thế khó xử cho đến khi họ giải quyết được nó",
+            "videoEditing":"Tôi chưa bao giờ là một fan hâm mộ lớn của phong cách chỉnh sửa phim âm nhạc đã len lỏi trong vài thập kỷ qua",
+            "SEOOptimization":"Tất cả các bảng xếp hạng hàng đầu đều có phương pháp tối ưu hóa công cụ tìm kiếm để được xếp hạng cao hơn",
+            "logoDesign":"Logo không chỉ là hình ảnh đại diện của một tổ chức mà còn là thông điệp mà chủ nhân của nó muốn gửi đến cộng đồng"
+        }
+    },
+    "contactMe":{
+        "titlePage":"Liên Hệ Tôi",
+        "contactInfo":"Thông tin Liên hệ",
+        "sendAMessage":"Gửi tin nhắn",
+        "firstName":"Họ*",
+        "lastName":"Tên*",
+        "emailAddress":"Địa chỉ Email*",
+        "subject":"Tiêu đề*",
+        "writeYourMessage":"Viết tin nhắn của bạn ở đây...*",
+        "address":"Quận 9, thành phố Hồ Chí Minh",
+        "send":"Gửi tin nhắn"
     }
 }

@@ -72,5 +72,46 @@
         "box2":"프로젝트 완료",
         "box3":"고객 만족",
         "box4":"수상 경력"
+    },
+    "portfolio":{
+        "portfolio":"계획",
+        "all": "모두",
+        "webDesign":"웹 디자인",
+        "Photography": "사진술",
+        "videoEditing": "영상 편집",
+        "logoDesign": "로고 디자인"
+    },
+    "otherSkills":{
+        "titlePage":{
+            "otherSkills":"다른 기술들"
+        },
+        "title":{
+            "webDesign": "웹 디자인",
+            "photography":"사진술",
+            "webDeveloper":"웹 개발자",
+            "videoEditing":"영상 편집",
+            "SEOOptimization":"현서 최적화",
+            "logoDesign":"로고 디자인"
+        },
+        "content":{
+            "webDesign":"웹 디자인은 웹 사이트를 더 매력적이고 눈길을 끕니다. UI / UX 최적화 작업 수행",
+            "photography":"사진은 현실만을 재현 할 수 있습니다. 하지만 포착 되 자마자 그 현실은 과거의 일부가됩니다",
+            "webDeveloper":"잘 알려진 개발자는 모두 해결할 때까지 딜레마에 빠집니다.",
+            "videoEditing":"나는 지난 수십 년 동안 떠오른 뮤직 비디오 스타일의 편집 영화를 좋아 한 적이 없습니다.",
+            "SEOOptimization":"모든 상위 순위에는 더 높은 순위를 매길 수있는 검색 엔진 최적화 방법이 있습니다.",
+            "logoDesign":"로고는 조직의 대표 이미지 일뿐만 아니라 소유자가 커뮤니티에 보내고 싶은 메시지이기도합니다."
+        }
+    },
+    "contactMe":{
+        "titlePage":"저에게 연락",
+        "contactInfo":"연락 정보",
+        "sendAMessage":"메세지를 보내다",
+        "firstName":"이름*",
+        "lastName":"성*",
+        "emailAddress":"이메일 주소*",
+        "subject":"제목*",
+        "writeYourMessage":"여기에 메시지를 쓰세요...*",
+        "address":"호치민시 9 군",
+        "send":"문자 보내"
     }
 }

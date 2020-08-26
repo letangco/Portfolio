@@ -12,9 +12,12 @@ import {
   faExclamationCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css";
-function Contact() {
+import { useTranslation } from "react-i18next";
+function Contact(props) {
+  // Translation
+  const { t } = useTranslation();
   // Pre Loading
-  const [isLoading, setStateLoading] = useState(true);
+  const [isLoading, setStateLoading] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
       setStateLoading(false); // Set lai isLoading sau 2s
@@ -120,6 +123,24 @@ function Contact() {
       return <ModalSuccess />
     }
   }
+  // Change Title Color
+  function changeColorTitle(value) {
+    switch (value) {
+      case "#ec1839":
+        return "section-title padd-15 color-change-title-red";
+      case "#2196f3":
+        return "section-title padd-15 color-change-title-blue";
+      case "#fa5b0f":
+        return "section-title padd-15 color-change-title-orange";
+      case "#ffb400":
+        return "section-title padd-15 color-change-title-yellow";
+      case "#72b626":
+        return "section-title padd-15 color-change-title-green";
+      default:
+        break;
+    }
+  }
+
   return (
     <>
       <div className={changePreLoader(isLoading)}>
@@ -142,15 +163,15 @@ function Contact() {
       {/* Content Contact */}
       <section className="portfolio section-portfolio">
         <div className="row-about">
-          <div className="section-title padd-15">
-            <h2>Contact Me</h2>
+          <div className={changeColorTitle(props.btnColor)}>
+  <h2>{t('contactMe.titlePage')}</h2>
           </div>
         </div>
         <div className="row-about content-contact">
           <div className="containerContact">
-            <div className="contactInfo">
+            <div className="contactInfo" style={{backgroundColor:props.btnColor}}>
               <div>
-                <h2>Contact Info</h2>
+                <h2>{t('contactMe.contactInfo')}</h2>
                 <ul className="info">
                   <li>
                     <span><FontAwesomeIcon className="icon-info-contact" icon={faPhone} /></span>
@@ -158,7 +179,7 @@ function Contact() {
                   </li>
                   <li>
                     <span><FontAwesomeIcon className="icon-info-contact" icon={faMapMarkerAlt} /></span>
-                    <span>District 9, Ho Chi Minh City</span>
+  <span>{t('contactMe.address')}</span>
                   </li>
                   <li>
                     <span><FontAwesomeIcon className="icon-info-contact" icon={faEnvelope} /></span>
@@ -191,45 +212,45 @@ function Contact() {
             </div>
 
             <div className="contactForm">
-              <h2>Send a Message</h2>
+              <h2>{t('contactMe.sendAMessage')}</h2>
               <div className="formBox">
                 <div className="inputBox w50">
                   <input type="text" name="name" value={name} required onChange={handleName} />
-                  <span>First Name*</span>
+                  <span>{t('contactMe.firstName')}</span>
                   <p className={name ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w50">
                   <input type="text" name="lastname" value={lastname} required onChange={handleLastname} />
-                  <span>Last Name*</span>
+                  <span>{t('contactMe.lastName')}</span>
                   <p className={lastname ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w50">
                   <input type="text" name="email" value={email} required onChange={handleEmail} />
-                  <span>Email Address*</span>
+                  <span>{t('contactMe.emailAddress')}</span>
                   <p className={email ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w50">
                   <input type="text" name="subject" value={subject} required onChange={handleSubject} />
-                  <span>Subject*</span>
+                  <span>{t('contactMe.subject')}</span>
                   <p className={subject ? "spaceChar displayNone" : "spaceChar"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w100">
                   <textarea name="message" value={message} required onChange={handleMessage}></textarea>
-                  <span>Write your message here...*</span>
+                  <span>{t('contactMe.writeYourMessage')}</span>
                   <p className={message ? "spaceCharMessage displayNone" : "spaceCharMessage"}>
                     <FontAwesomeIcon icon={faExclamationCircle} />
                   </p>
                 </div>
                 <div className="inputBox w100">
-                  <input type="submit" value="Send" onClick={formSubmit} />
+                  <input type="submit" value={t('contactMe.send')} onClick={formSubmit} style={{backgroundColor:props.btnColor}}/>
                 </div>
               </div>
             </div>

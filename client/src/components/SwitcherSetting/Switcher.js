@@ -8,7 +8,6 @@ function useOutsideAlerter(ref,setSetting) {
       // Xử lý khi click outside
       function handleClickOutside(event) {
           if (ref.current && !ref.current.contains(event.target)) {
-              // alert("You clicked outside of me!");
               setSetting(false);
           }
       }

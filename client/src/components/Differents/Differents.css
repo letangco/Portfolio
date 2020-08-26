@@ -53,7 +53,7 @@
   height: 55px;
   width: 55px;
   border-radius: 50%;
-  background-color: #ec1839;
+  /* background-color: #ec1839; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,15 +68,33 @@
   margin: 0 auto;
   margin-bottom: 30px;
 }
+/* Change Border Before */
 .other-item div h3::before {
   content: "";
   width: 70%;
-  height: 1px;
+  height: 2px;
   top: 45px;
-  background-color: red;
+  /* background-color: #ec1839; */
   margin: 0 auto;
   position: absolute;
 }
+.other-item div h3.line-red::before{
+  background-color: #ec1839;
+}
+.other-item div h3.line-blue::before{
+  background-color: #2196f3;
+}
+.other-item div h3.line-orange::before{
+  background-color: #FA5B0F;
+}
+.other-item div h3.line-yellow::before{
+  background-color: #ffb400;
+}
+.other-item div h3.line-green::before{
+  background-color: #72b626;
+}
+
+
 
 .other-item div .icon-other-item .faIconItem {
   color: #fdf9ff;
@@ -195,4 +213,26 @@
     .other-item div {
         min-height: 277px;
       }
+}
+
+/* Change Color Button */
+.color-change-title-red h2::before,
+.color-change-title-red h2::after{
+    background-color: #ec1839;
+}
+.color-change-title-blue h2::before,
+.color-change-title-blue h2::after{
+    background-color: #2196f3;
+}
+.color-change-title-orange h2::before,
+.color-change-title-orange h2::after{
+    background-color: #FA5B0F;
+}
+.color-change-title-yellow h2::before,
+.color-change-title-yellow h2::after{
+    background-color: #ffb400;
+}
+.color-change-title-green h2::before,
+.color-change-title-green h2::after{
+    background-color: #72b626;
 }

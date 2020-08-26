@@ -72,5 +72,46 @@
         "box2":"完成项目",
         "box3":"顾客快乐",
         "box4":"获奖"
+    },
+    "portfolio":{
+        "portfolio":"项目",
+        "all": "所有",
+        "webDesign":"网站设计",
+        "Photography": "摄影",
+        "videoEditing": "视频编辑",
+        "logoDesign": "标志设计"
+    },
+    "otherSkills":{
+        "titlePage":{
+            "otherSkills":"其他的技能"
+        },
+        "title":{
+            "webDesign": "网站设计",
+            "photography":"摄影",
+            "webDeveloper":"Web开发人员",
+            "videoEditing":"视频编辑",
+            "SEOOptimization":"搜索引擎优化",
+            "logoDesign":"标志设计"
+        },
+        "content":{
+            "webDesign":"网页设计使网站更具吸引力和吸引力。 执行UI / UX优化工作",
+            "photography":"摄影只能重现现实。 但是，一旦它被捕获，那现实便成为过去的一部分",
+            "webDeveloper":"知名的开发人员都陷入困境，直到他们解决了",
+            "videoEditing":"我从来都不是过去几十年来cr炙人口的音乐视频剪辑电影的忠实拥护者",
+            "SEOOptimization":"所有排名靠前的搜索引擎优化方法都可以使其排名更高",
+            "logoDesign":"徽标不仅是组织的代表形象，还是组织所有者要发送给社区的信息"
+        }
+    },
+    "contactMe":{
+        "titlePage":"联络我",
+        "contactInfo":"联络资料",
+        "sendAMessage":"发送消息",
+        "firstName":"名字*",
+        "lastName":"姓*",
+        "emailAddress":"电子邮件地址*",
+        "subject":"学科*",
+        "writeYourMessage":"在这里写下您的讯息...*",
+        "address":"胡志明市第9区",
+        "send":"发信息"
     }
 }
