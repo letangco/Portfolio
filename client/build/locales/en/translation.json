@@ -72,5 +72,47 @@
         "box2":"COMPLETE PROJECT",
         "box3":"HAPPY CUSTOMERS",
         "box4":"AWARDS WON"
+    },
+    "portfolio":{
+        "portfolio":"Portfolio",
+        "all": "All",
+        "webDesign":"Web Design",
+        "Photography": "Photography",
+        "videoEditing": "Video Editing",
+        "logoDesign": "Logo Design"
+    }
+    ,
+    "otherSkills":{
+        "titlePage":{
+            "otherSkills":"Other Skills"
+        },
+        "title":{
+            "webDesign": "Web Design",
+            "photography":"Photography",
+            "webDeveloper":"Web Developer",
+            "videoEditing":"Video Editing",
+            "SEOOptimization":"SEO Optimization",
+            "logoDesign":"Logo Design"
+        },
+        "content":{
+            "webDesign":"Web design makes the website more attractive and eye-catching. Perform UI/UX optimization work",
+            "photography":"Photography can only reproduce reality. But as soon as it is captured, that reality becomes part of the past",
+            "webDeveloper":"Well-known developers all run into dilemmas until they solve it",
+            "videoEditing":"I've never been a big fan of the music-video style of editing movies that crept in the last few decades",
+            "SEOOptimization":"All top rankings have search engine optimization methods to get ranked higher",
+            "logoDesign":"Logo is not only the representative image of an organization but also a message that its owner wants to send to the community"
+        }
+    },
+    "contactMe":{
+        "titlePage":"Contact Me",
+        "contactInfo":"Contact Info",
+        "sendAMessage":"Send a Message",
+        "firstName":"First Name*",
+        "lastName":"Last Name*",
+        "emailAddress":"Email Address*",
+        "subject":"Subject*",
+        "writeYourMessage":"Write your message here...*",
+        "address":"District 9, Ho Chi Minh City",
+        "send":"Send Message"
     }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -13,8 +13,6 @@ import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarAlt,
-  faSquare,
-  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 // According
 import Accordion from "@material-ui/core/Accordion";
@@ -35,18 +33,34 @@ const useStylesAccording = makeStyles((theme) => ({
   },
 }));
 
-export default function Education() {
+export default function Education(props) {
   const classes = useStylesAccording();
-
+  const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  // Sắp xếp cho TimeLine
+  const [align, setAlign] = useState("alternate");
+  useEffect(() => {
+    if (width <= 670) {
+      setAlign("left");
+    }
+    else setAlign("alternate");
+  }, [width]);
+  // Change Color Text Theme
+  function changeColorTextTheme(value, colorDark, colorLight) {
+    if (value === "dark") {
+      return { color: colorDark };
+    }
+    else return { color: colorLight };
+  }
   return (
-    <Timeline align="alternate">
+    // Align alternate/ left/right
+    <Timeline align={align} >
       <TimelineItem>
         <TimelineOppositeContent>
-        {/* Thời gian */}
+          {/* Thời gian */}
           <Typography
             variant="body2"
-            color="textSecondary"
             className="timeEducation"
+            style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
           >
             2017 - Present <FontAwesomeIcon icon={faCalendarAlt} />
           </Typography>
@@ -61,7 +75,7 @@ export default function Education() {
         {/* Nội dung */}
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-          {/* According */}
+            {/* According */}
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -77,32 +91,21 @@ export default function Education() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
+                <Typography style={{fontWeight:"700"}}> 
+                  - Major: Information System
+                  </Typography>
+                <Typography style={{fontWeight:"700"}}>
+                  - GPA: 7.67/10
+                  </Typography>
                 <Typography>
-                  <ul>
-                    <li>
-                      <FontAwesomeIcon icon={faSquare} />{" "}
-                      <span style={{ fontWeight: "600" }}>Major: </span>{" "}
-                      Information system
-                    </li>
-                    <li>
-                      <FontAwesomeIcon icon={faSquare} />{" "}
-                      <span style={{ fontWeight: "600" }}>GPA: </span> 7.62/10
-                      <ul>
-                        <li>
-                          <FontAwesomeIcon icon={faCheck} /> Data structures and
-                          algorithms: 8.3/10
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCheck} /> Data mining: 9.2/10
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCheck} />{" "}
-                          Information-technology project management: 8.6/10
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </Typography>
+                  Data structures and algorithms: 8.3/10
+                  </Typography>
+                <Typography>
+                  Data mining: 9.2/10
+                  </Typography>
+                <Typography>
+                  Information-technology project management: 8.6/10
+                  </Typography>
               </AccordionDetails>
             </Accordion>
           </Paper>
@@ -115,8 +118,8 @@ export default function Education() {
         <TimelineOppositeContent>
           <Typography
             variant="body2"
-            color="textSecondary"
             className="timeEducation"
+            style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
           >
             <FontAwesomeIcon icon={faCalendarAlt} /> June 2018 - March 2019
           </Typography>
@@ -145,16 +148,11 @@ export default function Education() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  <ul>
-                    <li>
-                      <FontAwesomeIcon icon={faSquare} />{" "}Made Remote controlled car by RF with my team.
-                    </li>
-                    <li>
-                      <FontAwesomeIcon icon={faSquare} />{" "}Participated in teaching basic C programming for.
-                      
-                    </li>
-                  </ul>
+                <Typography style={{fontWeight:"700"}}>
+                  - Made Remote controlled car by RF with my team.
+                </Typography>
+                <Typography style={{fontWeight:"700"}}>
+                  - Participated in teaching basic C programming for.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -165,8 +163,8 @@ export default function Education() {
         <TimelineOppositeContent>
           <Typography
             variant="body2"
-            color="textSecondary"
             className="timeEducation"
+            style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
           >
             June 1, 2020 - July 17, 2020 <FontAwesomeIcon icon={faCalendarAlt} />
           </Typography>
@@ -195,22 +193,17 @@ export default function Education() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  <ul>
-                    <li>
-                      <FontAwesomeIcon icon={faSquare} />{" "} Learned and used ReactJS with Typescript for projects and demos in Fresher Tour 3
-                    </li>
-                    <li>
-                      <FontAwesomeIcon icon={faSquare} />{" "} Learn and use Material UI, Bootstrap to design the interface
-                    </li>
-                  </ul>
+                <Typography style={{fontWeight:"700"}}>
+                  - Learned and used ReactJS with Typescript for projects and demos in Fresher Tour 3
+                </Typography>
+                <Typography style={{fontWeight:"700"}}>
+                  - Learn and use Material UI, Bootstrap to design the interface
                 </Typography>
               </AccordionDetails>
             </Accordion>
           </Paper>
         </TimelineContent>
       </TimelineItem>
-
     </Timeline>
   );
 }

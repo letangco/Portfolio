@@ -91,12 +91,12 @@
 }
 .achievement-info .achievement-item div {
   display: block;
-  border: 1px solid #e8dfec;
+  /* border: 1px solid #e8dfec; */
   min-height: 170px;
   /* text-align: center;
     vertical-align: middle; */
   padding: 20px 30px 10px 45px;
-  background-color: #fdf9ff;
+  /* background-color: #fdf9ff; */
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 .achievement-info .achievement-item div h1 {
@@ -108,7 +108,7 @@
 .achievement-info .achievement-item div h1 label {
   vertical-align: super;
   font-size: 33px;
-  color: #504e70;
+  /* color: #504e70; */
 }
 .achievement-info .achievement-item div p {
   /* text-align: center; */
@@ -137,7 +137,7 @@
 }
 .about-content-2 .personal-info .row-about .info-item p span {
   font-weight: 400;
-  color: #504e70;
+  /* color: #504e70; */
 }
 
 /*  Custom button DownloadCV */
@@ -207,10 +207,16 @@
   /* background-color: white; */
 }
 .skills-info .skill-items {
-  background-color: white;
+  /* background-color: white; */
   padding: 30px;
   height: 100%;
   width: 100%;
+}
+.skills-info .skill-items p{
+  /* background-color: white; */
+  margin: 0;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 .containers-skill {
   width: 100%;
@@ -220,25 +226,37 @@
 
 .containers-skill .skills {
   text-align: right;
-  color: white;
   height: 5px;
 }
+.containers-skill .skills p{
+  position: absolute;
+  top: -23px;
+  right: 0;
+}
 
-.containers-skill .html {
+.containers-skill .c-c-plus {
   width: 90%;
-  background-color: #ec1839;
-} /* Green */
+  margin-bottom: 16px;
+} 
+.containers-skill .cSharp {
+  width: 85%;
+  margin-bottom: 16px;
+} 
+.containers-skill .html {
+  width: 95%;
+  margin-bottom: 16px;
+} 
 .containers-skill .css {
-  width: 80%;
-  background-color: #ec1839;
+  width: 85%;
+  margin-bottom: 16px;
 } /* Blue */
 .containers-skill .js {
-  width: 65%;
-  background-color: #ec1839;
+  width: 75%;
+  margin-bottom: 16px;
 } /* Red */
 .containers-skill .php {
   width: 60%;
-  background-color: #ec1839;
+  margin-bottom: 16px;
 } /* Dark Grey */
 
 /* Responsive */
@@ -264,9 +282,11 @@
     margin-right: 8px;
     padding: 0 12px;
   }
-  /* Skills */
-  .skills-info {
-    padding: 0;
+
+}
+@media (max-width: 991px){
+  .skills-info{
+    padding: 0px !important;
   }
 }
 

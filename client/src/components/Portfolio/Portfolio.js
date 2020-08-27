@@ -78,7 +78,13 @@ function Portfolio(props) {
         break;
     }
   }
-  // Active SelectList
+  // Change Color Text Theme
+  function changeColorTextTheme(value, colorDark, colorLight) {
+    if (value === "dark") {
+      return { color: colorDark };
+    }
+    else return { color: colorLight };
+  }
 
   return (
     <>
@@ -103,7 +109,7 @@ function Portfolio(props) {
       <section className="portfolio section-portfolio">
         <div className="row-about">
           <div className={changeColorTitle(props.btnColor)}>
-  <h2>{t('portfolio.portfolio')}</h2>
+            <h2 style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")} >{t('portfolio.portfolio')}</h2>
           </div>
         </div>
         <div className="row-about content-portfolio">
@@ -112,9 +118,11 @@ function Portfolio(props) {
               type="button"
               onClick={() => {
                 setSelectPortfolio("all");
-                
+
               }}
-              style={activeSelectPorfolio==="all"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
+              style={activeSelectPorfolio === "all" ? (props.theme==="dark"? { borderBottom: "3px solid" + props.btnColor, color:"#e9e9e9"}:
+               {borderBottom: "3px solid" + props.btnColor, color:"#504e70"}) :(props.theme==="dark"? { borderBottom: "none", color:"#e9e9e9"}:
+               {borderBottom: "none", color:"#504e70"})}
             >
               {/* All */}
               {t('portfolio.all')}
@@ -124,7 +132,9 @@ function Portfolio(props) {
               onClick={() => {
                 setSelectPortfolio("webDesign");
               }}
-              style={activeSelectPorfolio==="webDesign"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
+              style={activeSelectPorfolio === "webDesign" ? (props.theme==="dark"? { borderBottom: "3px solid" + props.btnColor, color:"#e9e9e9"}:
+               {borderBottom: "3px solid" + props.btnColor, color:"#504e70"}) :(props.theme==="dark"? { borderBottom: "none", color:"#e9e9e9"}:
+               {borderBottom: "none", color:"#504e70"})}
             >
               {/* Web Design */}
               {t('portfolio.webDesign')}
@@ -134,7 +144,9 @@ function Portfolio(props) {
               onClick={() => {
                 setSelectPortfolio("photography");
               }}
-              style={activeSelectPorfolio==="photography"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
+              style={activeSelectPorfolio === "photography" ? (props.theme==="dark"? { borderBottom: "3px solid" + props.btnColor, color:"#e9e9e9"}:
+              {borderBottom: "3px solid" + props.btnColor, color:"#504e70"}) :(props.theme==="dark"? { borderBottom: "none", color:"#e9e9e9"}:
+              {borderBottom: "none", color:"#504e70"})}
             >
               {t('portfolio.Photography')}
             </button>
@@ -143,7 +155,9 @@ function Portfolio(props) {
               onClick={() => {
                 setSelectPortfolio("videoEditing");
               }}
-              style={activeSelectPorfolio==="videoEditing"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
+              style={activeSelectPorfolio === "videoEditing" ? (props.theme==="dark"? { borderBottom: "3px solid" + props.btnColor, color:"#e9e9e9"}:
+              {borderBottom: "3px solid" + props.btnColor, color:"#504e70"}) :(props.theme==="dark"? { borderBottom: "none", color:"#e9e9e9"}:
+              {borderBottom: "none", color:"#504e70"})}
             >
               {t('portfolio.videoEditing')}
             </button>
@@ -152,7 +166,9 @@ function Portfolio(props) {
               onClick={() => {
                 setSelectPortfolio("logoDesign");
               }}
-              style={activeSelectPorfolio==="logoDesign"?{borderBottom:"3px solid"+props.btnColor}:{borderBottom:"none"}}
+              style={activeSelectPorfolio === "logoDesign" ? (props.theme==="dark"? { borderBottom: "3px solid" + props.btnColor, color:"#e9e9e9"}:
+               {borderBottom: "3px solid" + props.btnColor, color:"#504e70"}) :(props.theme==="dark"? { borderBottom: "none", color:"#e9e9e9"}:
+               {borderBottom: "none", color:"#504e70"})}
             >
               {t('portfolio.logoDesign')}
             </button>
