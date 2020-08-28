@@ -157,7 +157,7 @@ function Menu() {
             {/* Nav */}
             <ul className="nav-menu-div">
               <li onClick={() => { setIsActive("home") }} className={HoverBtnColor(btnColor)}>
-                <NavLink to="/" style={isActive === "home" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
+                <NavLink to="/home" style={isActive === "home" ? theme==="dark"?{color: btnColor,borderBottom:"1px solid #393939"}:{color: btnColor,borderBottom:"1px solid #e8dfec"} : 
                 (theme==="dark"?borderBottom.dark:borderBottom.light)}>
                   <FontAwesomeIcon icon={faHome} /> &nbsp;{t("menu.home")}
                 </NavLink>
@@ -207,7 +207,7 @@ function Menu() {
           <div className="main-content">
             <section className={transportSection(onToggle)} style={theme==="dark"?{backgroundColor:"#151515"}:{}}>
               <Switch>
-                <Route path="/" exact component={() => <Home btnColor={btnColor} theme={theme}/>} />
+                <Route path="/home" exact component={() => <Home btnColor={btnColor} theme={theme}/>} />
                 <Route path="/about" exact component={() => <About btnColorAbout={btnColor} theme={theme}/>} />
                 <Route path="/portfolio" exact component={() => <Portfolio btnColor={btnColor} theme={theme}/>} />
                 <Route path="/different" exact component={() => <Differents btnColor={btnColor} theme={theme}/>} />

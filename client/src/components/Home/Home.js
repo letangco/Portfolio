@@ -28,7 +28,7 @@ function Home(props) {
             <NavLink exact to="/contact" style={{ backgroundColor: props.btnColor }}>
               <i className="fa fa-envelope" aria-hidden="true"></i>
             </NavLink>
-            <NavLink exact to="/" style={{ backgroundColor: props.btnColor }}>
+            <NavLink exact to="/home" style={{ backgroundColor: props.btnColor }}>
               <FontAwesomeIcon icon={faBlog} />
             </NavLink>
           </div>
