@@ -1,4 +1,5 @@
-var PORT =process.env.PORT ||3001;
+// var PORT =process.env.PORT ||3001;
+var PORT =process.env.PORT ||5000;
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
