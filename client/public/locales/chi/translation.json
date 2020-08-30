@@ -113,5 +113,61 @@
         "writeYourMessage":"在这里写下您的讯息...*",
         "address":"胡志明市第9区",
         "send":"发信息"
+    },
+    "education":{
+        "title":"教育",
+        "edu1":{
+            "time":"2017年至今",
+            "title":"信息技术大学（UIT）",
+            "major":"-专业：信息系统",
+            "gpa":"-GPA：7.67 / 10",
+            "data1":"数据结构和算法：8.3 / 10",
+            "data2":"数据挖掘：9.2 / 10",
+            "info":"信息技术项目管理：8.6 / 10"
+        },
+        "edu2":{
+            "time":"2018年6月-2019年3月",
+            "title":"CEEC俱乐部会员（计算机工程嵌入式俱乐部）",
+            "made":"-我的团队通过RF制造了遥控车。",
+            "participated":"-参与教学的基础C编程。"
+        },
+        "edu3":{
+            "time":"2020年6月1日-2020年7月17日",
+            "title":"Anttizen公司的前端培训生",
+            "learned":"-在Fresher Tour 3中学习和使用带有Typescript的ReactJS进行项目和演示",
+            "learn ":"-学习并使用Material UI，Bootstrap设计界面"
+        }
+    },
+    "experience":{
+        "title":"经验",
+        "exp1":{
+            "time":"九月14,2019-十二月22，2019",
+            "title":"在线英语测试网站",
+            "position":"-职位：学生",
+            "projectDescription":"-项目描述：具有HTML，CSS，JavaScript，PHP和MySQL管理系统的在线英语测试网站开发。",
+            "teamSize ":"-团队人数：3",
+            "responsive":"-职责：",
+            "communicate":"与队友沟通以阐明网站的关键功能。",
+            "website":"网站用户界面（UI）设计",
+            "design":"设计和创建数据库",
+            "technology":"-技术：HTML，CSS，JavaScript，PHP，MySQL管理系统。",
+            "link":"-链接项目：",
+            "here":"这里"
+        },
+        "exp2":{
+            "time":"2020年6月12日-2020年7月28日",
+            "title":"计算器死亡率和仪表板Covid-19",
+            "position":"-职位：实习生",
+            "projectDescription":"-项目说明：各国对国家/地区使用者死亡率的估算是由Covid-19和全球covid-19的统计表得出的。",
+            "teamSize ":"-团队人数：1",
+            "responsive":"-职责：",
+            "website":"网站用户界面（UI）设计",
+            "get":"从API获取数据并将其显示在界面上。",
+            "study":"研究如何计算每个国家的Covid-19死亡率。",
+            "technology":"-技术：ReactJS，TypeScript，Bootstrap，Material UI，Google Chart，Apex Chart",
+            "link":"-链接项目：",
+            "here":"这里",
+            "linkDeploy":"-链接部署项目："
+        }
     }
 }

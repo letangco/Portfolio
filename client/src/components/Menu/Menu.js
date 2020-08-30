@@ -212,7 +212,7 @@ function Menu() {
                 <Route path="/portfolio" exact component={() => <Portfolio btnColor={btnColor} theme={theme}/>} />
                 <Route path="/different" exact component={() => <Differents btnColor={btnColor} theme={theme}/>} />
                 <Route path="/contact" exact component={() => <Contact btnColor={btnColor} theme={theme} />} />
-                <Route path="/blog" exact component={Form} />
+                <Route path="/blog" exact component={()=><Form btnColor={btnColor} theme={theme}/>} />
               </Switch>
             </section>
           </div>

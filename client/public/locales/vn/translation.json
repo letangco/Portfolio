@@ -114,4 +114,61 @@
         "address":"Quận 9, thành phố Hồ Chí Minh",
         "send":"Gửi tin nhắn"
     }
+    ,
+    "education":{
+        "title":"Học tập",
+        "edu1":{
+            "time":"2017 - Hiện tại",
+            "title":"Đại học Công nghệ Thông tin (UIT)",
+            "major":"- Chuyên ngành: Hệ thống thông tin",
+            "gpa":"- Điểm trung bình: 7.67 / 10",
+            "data1":"Cấu trúc dữ liệu và giải thuật: 8,3 / 10",
+            "data2":"Khai thác dữ liệu: 9,2 / 10",
+            "info":"Quản lý dự án công nghệ thông tin: 8,6 / 10"
+        },
+        "edu2":{
+            "time":"Tháng 6 năm 2018 - tháng 3 năm 2019",
+            "title":"Thành viên Câu lạc bộ CEEC (Câu lạc bộ Kỹ thuật Máy tính Nhúng)",
+            "made":"- Làm xe điều khiển từ xa bằng RF với nhóm",
+            "participated":"Tham gia trực tiếp giảng dạy lập trình C cơ bản cho học sinh THPT"
+        },
+        "edu3":{
+            "time":"1 tháng 6 năm 2020 - 17 tháng 7 năm 2020",
+            "title":"Thực tập sinh Front-End tại công ty Anttizen",
+            "learned":"- Đã học và sử dụng ReactJS với Typescript cho các dự án và demo trong ngày hội Fresher Tour 3",
+            "learn ":"- Tìm hiểu và sử dụng Material UI, Bootstrap để thiết kế giao diện"
+        }
+    },
+    "experience":{
+        "title":"Kinh nghiệm",
+        "exp1":{
+            "time":"14 tháng 9, 2019 - 22 tháng 12, 2019",
+            "title":"Trang web Kiểm tra Tiếng Anh Trực tuyến",
+            "position":"- Vị trí: Sinh viên",
+            "projectDescription":"- Mô tả dự án: Phát triển trang web kiểm tra tiếng Anh trực tuyến với hệ thống quản lý HTML, CSS, JavaScript, PHP và MySQL.",
+            "teamSize ":"- Quy mô đội: 3",
+            "responsive":"- Trách nhiệm:",
+            "communicate":"Giao tiếp với đồng đội để làm rõ chức năng chính của trang web.",
+            "website":"Thiết kế giao diện người dùng (UI) trang web",
+            "design":"Thiết kế và tạo cơ sở dữ liệu",
+            "technology":"- Công nghệ: Hệ quản trị HTML, CSS, JavaScript, PHP, MySQL.",
+            "link":"- Link dự án:",
+            "here":"Tại đây"
+        },
+        "exp2":{
+            "time":"12 tháng 6 năm 2020 - 28 tháng 7 năm 2020",
+            "title":"Dự đoán tỉ lệ tử vong và bảng thống kê dữ liệu do Covid-19",
+            "position":"- Vị trí: Thực tập sinh",
+            "projectDescription":"- Mô tả dự án: Ước tính tỷ lệ tử vong của người dùng theo từng quốc gia do Covid-19 gây ra và bảng thống kê của covid-19 trên toàn thế giới.",
+            "teamSize ":"- Quy mô đội: 1",
+            "responsive":"- Trách nhiệm:",
+            "website":"Thiết kế giao diện người dùng (UI) trang web",
+            "get":"Lấy dữ liệu từ API và hiển thị trên giao diện.",
+            "study":"Nghiên cứu cách tính tỷ lệ tử vong do Covid-19 của từng quốc gia.",
+            "technology":"- Công nghệ: ReactJS, TypeScript, Bootstrap, Material UI, Google Chart, Apex Chart",
+            "link":"- Link dự án:",
+            "here":"Tại đây",
+            "linkDeploy":"- Link triển khai dự án:"
+        }
+    }
 }

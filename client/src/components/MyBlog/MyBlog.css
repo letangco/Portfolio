@@ -1,0 +1,17 @@
+.notice-blog{
+    border: 1px solid red;
+    display: block;
+    padding: 35px 40px;
+    text-align: center;
+}
+.myblog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.notice-blog p{
+    font-family: "Poppins",sans-serif;
+    font-size: 17px;
+}

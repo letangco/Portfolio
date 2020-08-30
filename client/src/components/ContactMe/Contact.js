@@ -4,6 +4,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ModalSuccess from './ModalSuccess';
 import ModalFailed from './ModalFailed';
+import ScrollToTop from '../ScrollButton/ScrollToTop';
 import {
   faPhone,
   faMapMarkerAlt,
@@ -262,6 +263,7 @@ function Contact(props) {
 
         </div>
       </section>
+      <ScrollToTop />
     </>
   );
 }

@@ -132,7 +132,7 @@
   font-weight: 700;
   color: #504e70;
   /* background-color: red; */
-  border-bottom: 1px solid #d4d4e3;
+  border-bottom: 1px solid #e8dfec;
   line-height: 40px;
 }
 .about-content-2 .personal-info .row-about .info-item p span {
@@ -154,7 +154,7 @@
   margin-top: 25px;
   margin-bottom: 50px;
 }
-.btn-personal-about div p {
+.btn-personal-about div p  {
   display: inline-block;
   /* background-color: #ec1839; */
   height: 45px;

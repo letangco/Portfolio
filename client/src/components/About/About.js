@@ -94,46 +94,42 @@ function About(props) {
       }
     }
   }
-// Change Title Education
-   function changeColorTextThemeEducation(value,colorDark, colorLight)
-   {
-     if (value ==="dark")
-     {
-       return {
-         color: colorDark,
+  // Change Title Education
+  function changeColorTextThemeEducation(value, colorDark, colorLight) {
+    if (value === "dark") {
+      return {
+        color: colorDark,
         padding: "15px 30px",
         fontFamily: "'Poppins', sans-serif",
         fontWeight: "600"
-       }
-     }else {
+      }
+    } else {
       return {
         color: colorLight,
-       padding: "15px 30px",
-       fontFamily: "'Poppins', sans-serif",
-       fontWeight: "600"
-      }
-     }
-   }
-// Change Title Experience
-   function changeColorTextThemeExperience(value,colorDark, colorLight)
-   {
-     if (value ==="dark")
-     {
-       return {
-         color: colorDark,
         padding: "15px 30px",
         fontFamily: "'Poppins', sans-serif",
         fontWeight: "600"
-       }
-     }else {
+      }
+    }
+  }
+  // Change Title Experience
+  function changeColorTextThemeExperience(value, colorDark, colorLight) {
+    if (value === "dark") {
+      return {
+        color: colorDark,
+        padding: "15px 30px",
+        fontFamily: "'Poppins', sans-serif",
+        fontWeight: "600"
+      }
+    } else {
       return {
         color: colorLight,
-       padding: "15px 30px",
-       fontFamily: "'Poppins', sans-serif",
-       fontWeight: "600"
+        padding: "15px 30px",
+        fontFamily: "'Poppins', sans-serif",
+        fontWeight: "600"
       }
-     }
-   }
+    }
+  }
   return (
     <>
       <div className={changePreLoader(isLoading)}>
@@ -143,7 +139,7 @@ function About(props) {
       </div>
       <div
         className="header-scroll"
-        style={{ marginLeft: "0px", padding: "0px"}}
+        style={{ marginLeft: "0px", padding: "0px" }}
       >
         <div className="progress-container">
           <div
@@ -338,9 +334,9 @@ function About(props) {
             <div className="education-timeline col-xs-12 col-sm-12 col-md-12 col-lg-12" style={changeBackgroundTheme(props.theme, "#222222", "#fdf9ff")}>
               <div>
                 <div className="row">
-                  <h4 style={changeColorTextThemeEducation(props.theme,"#ffffff", "#302e4d")}
+                  <h4 style={changeColorTextThemeEducation(props.theme, "#ffffff", "#302e4d")}
                   >
-                    <FontAwesomeIcon icon={faGraduationCap} /> Education
+                    <FontAwesomeIcon icon={faGraduationCap} /> {t('education.title')}
                 </h4>
                 </div>
                 <Education theme={props.theme} />
@@ -349,10 +345,10 @@ function About(props) {
             {/* Experience Timeline */}
             <div className="experience-timeline col-xs-12 col-sm-12 col-md-12 col-lg-12" style={changeBackgroundTheme(props.theme, "#222222", "#fdf9ff")}>
               <div className="row">
-                <h4 
-                style={changeColorTextThemeExperience(props.theme,"#ffffff", "#302e4d")}
+                <h4
+                  style={changeColorTextThemeExperience(props.theme, "#ffffff", "#302e4d")}
                 >
-                  <FontAwesomeIcon icon={faBriefcase} /> Experience
+                  <FontAwesomeIcon icon={faBriefcase} /> {t('experience.title')}
                 </h4>
                 <Experience theme={props.theme} />
               </div>

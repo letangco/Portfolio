@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -22,6 +22,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "./Education.css";
 import { Link } from "@material-ui/core";
+import { useTranslation } from 'react-i18next';
 const useStylesAccording = makeStyles((theme) => ({
   paper: {
     padding: "0px",
@@ -53,6 +54,8 @@ export default function Experience(props) {
     }
     else return { color: colorLight };
   }
+  // Translation
+  const { t } = useTranslation();
   return (
     <Timeline align={align} >
 
@@ -63,7 +66,7 @@ export default function Experience(props) {
             style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
             className="timeEducation"
           >
-            Sep 14,2019 - Dec 22, 2019 <FontAwesomeIcon icon={faCalendarAlt} />
+            {t('experience.exp1.time')} <FontAwesomeIcon icon={faCalendarAlt} />
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -86,34 +89,38 @@ export default function Experience(props) {
                   component="h1"
                   className="titleEducation"
                 >
-                  Online English Test Website
+                  {t('experience.exp1.title')}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography style={{fontWeight:"700"}}>- Position: Student</Typography>
+                <Typography style={{ fontWeight: "700" }}>{t('experience.exp1.position')}</Typography>
 
-                <Typography style={{fontWeight:"700"}}>
-                 - Project Description: Online English Test Website Development with HTML, CSS, JavaScript, PHP and MySQL management system.
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp1.projectDescription')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>- Team size: 3</Typography>
-                <Typography style={{fontWeight:"700"}}>- Responsibilities:</Typography>
-                <Typography>
-                  Communicate with teammates to clarify key function of the website.
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp1.teamSize')}
                 </Typography>
-                <Typography>
-                  Website user interface (UI) design
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp1.responsive')}
                 </Typography>
                 <Typography>
-                  Design and create database
+                  {t('experience.exp1.communicate')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Technologies: HTML, CSS, JavaScript, PHP, MySQL management system.
+                <Typography>
+                  {t('experience.exp1.website')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                - Link project: <Link href="https://github.com/letangco/OnlineEnglish-Test-Website" target="_blank" rel="noopener">
-                    Here <FontAwesomeIcon icon={faLink}/>
+                <Typography>
+                  {t('experience.exp1.design')}
+                </Typography>
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp1.technology')}
+                </Typography>
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp1.link')} <Link style={{textDecoration:"none"}} href="https://github.com/letangco/OnlineEnglish-Test-Website" target="_blank" rel="noopener">
+                    {t('experience.exp1.here')} <FontAwesomeIcon icon={faLink} />
                   </Link>
-                  
+
                 </Typography>
 
               </AccordionDetails>
@@ -131,7 +138,7 @@ export default function Experience(props) {
             style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
             className="timeEducation"
           >
-            <FontAwesomeIcon icon={faCalendarAlt} /> June 12, 2020 - July 28, 2020
+            <FontAwesomeIcon icon={faCalendarAlt} /> {t('experience.exp2.time')}
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -154,42 +161,42 @@ export default function Experience(props) {
                   component="h1"
                   className="titleEducation"
                 >
-                  Calculator Death Rate and Dashboard Covid-19
+                  {t('experience.exp2.title')}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography style={{fontWeight:"700"}}>
-                 - Position: Intern
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp2.position')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Project Description: Estimates of country-bycountry user mortality are caused by Covid-19 and statistics table of covid-19 worldwide.
+                <Typography style={{ fontWeight: "700" }}>
+                 {t('experience.exp2.projectDescription')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                 - Team size: 1
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp2.teamSize')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Responsibilities:
-                </Typography>
-                <Typography>
-                  Website user interface (UI) design
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp2.responsive')}
                 </Typography>
                 <Typography>
-                  Get data from the API and display it on the interface.
+                  {t('experience.exp2.website')}
                 </Typography>
                 <Typography>
-                  Study how to calculate Covid-19 mortality rate of each country.
+                  {t('experience.exp2.get')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Technologies: ReactJS, TypeScript, Bootstrap, Material UI, Google Chart, Apex Chart
+                <Typography>
+                  {t('experience.exp2.study')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Link project: <Link href="https://github.com/letangco/Covid-19-demo" target="_blank" rel="noopener">
-                    Here <FontAwesomeIcon icon={faLink}/>
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp2.technology')}
+                </Typography>
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp2.link')} <Link href="https://github.com/letangco/Covid-19-demo" target="_blank" rel="noopener" style={{textDecoration:"none"}}>
+                    {t('experience.exp2.here')} <FontAwesomeIcon icon={faLink} />
                   </Link>
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Link deploy project: <Link href="http://letangco.surge.sh/" target="_blank" rel="noopener">
-                  http://letangco.surge.sh/
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('experience.exp2.linkDeploy')} <Link href="http://letangco.surge.sh/" target="_blank" rel="noopener" style={{textDecoration:"none"}}>
+                    http://letangco.surge.sh/
                   </Link>
                 </Typography>
               </AccordionDetails>

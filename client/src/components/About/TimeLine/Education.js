@@ -20,6 +20,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "./Education.css";
+import { useTranslation } from 'react-i18next';
 const useStylesAccording = makeStyles((theme) => ({
   paper: {
     padding: "0px",
@@ -51,6 +52,8 @@ export default function Education(props) {
     }
     else return { color: colorLight };
   }
+  // Translation
+  const { t } = useTranslation();
   return (
     // Align alternate/ left/right
     <Timeline align={align} >
@@ -62,7 +65,7 @@ export default function Education(props) {
             className="timeEducation"
             style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
           >
-            2017 - Present <FontAwesomeIcon icon={faCalendarAlt} />
+            {t('education.edu1.time')} <FontAwesomeIcon icon={faCalendarAlt} />
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -87,24 +90,24 @@ export default function Education(props) {
                   component="h1"
                   className="titleEducation"
                 >
-                  University of Information Technology (UIT)
+                  {t('education.edu1.title')}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography style={{fontWeight:"700"}}> 
-                  - Major: Information System
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('education.edu1.major')}
                   </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - GPA: 7.67/10
-                  </Typography>
-                <Typography>
-                  Data structures and algorithms: 8.3/10
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('education.edu1.gpa')}
                   </Typography>
                 <Typography>
-                  Data mining: 9.2/10
+                  {t('education.edu1.data1')}
                   </Typography>
                 <Typography>
-                  Information-technology project management: 8.6/10
+                  {t('education.edu1.data2')}
+                  </Typography>
+                <Typography>
+                  {t('education.edu1.info')}
                   </Typography>
               </AccordionDetails>
             </Accordion>
@@ -121,7 +124,7 @@ export default function Education(props) {
             className="timeEducation"
             style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
           >
-            <FontAwesomeIcon icon={faCalendarAlt} /> June 2018 - March 2019
+            <FontAwesomeIcon icon={faCalendarAlt} /> {t('education.edu2.title')}
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -144,15 +147,15 @@ export default function Education(props) {
                   component="h1"
                   className="titleEducation"
                 >
-                  Member of CEEC Club (Computer Engineering Embedded Club)
+                  {t('education.edu2.title')}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography style={{fontWeight:"700"}}>
-                  - Made Remote controlled car by RF with my team.
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('education.edu2.made')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Participated in teaching basic C programming for.
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('education.edu2.participated')}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -166,7 +169,7 @@ export default function Education(props) {
             className="timeEducation"
             style={changeColorTextTheme(props.theme, "#ffffff", "#302e4d")}
           >
-            June 1, 2020 - July 17, 2020 <FontAwesomeIcon icon={faCalendarAlt} />
+            {t('education.edu3.time')} <FontAwesomeIcon icon={faCalendarAlt} />
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -189,15 +192,15 @@ export default function Education(props) {
                   component="h1"
                   className="titleEducation"
                 >
-                  Front-End trainee at Anttizen company
+                  {t('education.edu3.title')}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography style={{fontWeight:"700"}}>
-                  - Learned and used ReactJS with Typescript for projects and demos in Fresher Tour 3
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('education.edu3.learned')}
                 </Typography>
-                <Typography style={{fontWeight:"700"}}>
-                  - Learn and use Material UI, Bootstrap to design the interface
+                <Typography style={{ fontWeight: "700" }}>
+                  {t('education.edu3.learn')}
                 </Typography>
               </AccordionDetails>
             </Accordion>

@@ -3,7 +3,7 @@ import Rocket from "../../image/rocket.png";
 import { useTranslation } from "react-i18next";
 import "./Portfolio.css";
 // import ModelPortfolio from './Modal/ModelPortfolio';
-
+import ScrollToTop from '../ScrollButton/ScrollToTop';
 // import Lazy All Component
 const All = lazy(() => import("./All"));
 const DevDesign = lazy(() => import("./DevDesign"));
@@ -179,6 +179,7 @@ function Portfolio(props) {
           </div>
         </div>
       </section>
+      <ScrollToTop />
     </>
   );
 }

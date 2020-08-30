@@ -11,6 +11,7 @@ import {
 import "./Differents.css";
 import Rocket from "../../image/rocket.png";
 import { useTranslation } from "react-i18next";
+import ScrollToTop from '../ScrollButton/ScrollToTop';
 function Differents(props) {
   // Translation
   const { t } = useTranslation();
@@ -233,6 +234,7 @@ function Differents(props) {
           </div>
         </div>
       </section>
+      <ScrollToTop />
     </>
   );
 }

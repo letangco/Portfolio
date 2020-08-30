@@ -114,4 +114,61 @@
         "address":"호치민시 9 군",
         "send":"문자 보내"
     }
+    ,
+    "education":{
+        "title":"교육",
+        "edu1":{
+            "time":"2017-현재",
+            "title":"정보 기술 대학 (UIT)",
+            "major":"-전공 : 정보 시스템",
+            "gpa":"-평점 : 7.67 / 10",
+            "data1":"데이터 구조 및 알고리즘 : 8.3 / 10",
+            "data2":"데이터 마이닝 : 9.2 / 10",
+            "info":"정보 기술 프로젝트 관리 : 8.6 / 10"
+        },
+        "edu2":{
+            "time":"2018 년 6 월-2019 년 3 월",
+            "title":"CEEC 클럽 (컴퓨터 엔지니어링 임베디드 클럽) 회원",
+            "made":"-우리 팀과 함께 RF로 원격 제어 차량을 만들었습니다.",
+            "participated":"-기초 C 프로그래밍 교육 참여."
+        },
+        "edu3":{
+            "time":"2020 년 6 월 1 일-2020 년 7 월 17 일",
+            "title":"Anttizen 회사의 프런트 엔드 연수생",
+            "learned":"-Fresher Tour 3에서 프로젝트 및 데모를 위해 Typescript와 함께 ReactJS를 배우고 사용했습니다.",
+            "learn ":"-Material UI, Bootstrap을 배우고 사용하여 인터페이스 디자인"
+        }
+    },
+    "experience":{
+        "title":"경험",
+        "exp1":{
+            "time":"2019 년 9 월 14 일-2019 년 12 월 22 일 ",
+            "title":"온라인 영어 시험 웹 사이트",
+            "position":"-직위 : 학생",
+            "projectDescription":"-프로젝트 설명 : HTML, CSS, JavaScript, PHP 및 MySQL 관리 시스템을 이용한 온라인 영어 테스트 웹 사이트 개발.",
+            "teamSize ":"-팀 규모 : 3",
+            "responsive":"- 책임:",
+            "communicate":"팀원들과 소통하여 웹 사이트의 주요 기능을 명확히합니다.",
+            "website":"웹 사이트 사용자 인터페이스 (UI) 디자인",
+            "design":"데이터베이스 설계 및 생성",
+            "technology":"-기술 : HTML, CSS, JavaScript, PHP, MySQL 관리 시스템.",
+            "link":"-링크 프로젝트 : ",
+            "here":"여기"
+        },
+        "exp2":{
+            "time":"2020 년 6 월 12 일-2020 년 7 월 28 일",
+            "title":"계산기 사망률 및 대시 보드 Covid-19",
+            "position":"-직위 : 인턴",
+            "projectDescription":"-프로젝트 설명 : 국가 별 사용자 사망률은 전 세계적으로 Covid-19 및 covid-19 통계표에 의해 발생합니다.",
+            "teamSize ":"-팀 규모 : 1",
+            "responsive":"- 책임:",
+            "website":"웹 사이트 사용자 인터페이스 (UI) 디자인",
+            "get":"API에서 데이터를 가져 와서 인터페이스에 표시합니다.",
+            "study":"각 국가의 Covid-19 사망률을 계산하는 방법을 연구하십시오.",
+            "technology":"-기술 : ReactJS, TypeScript, Bootstrap, Material UI, Google Chart, Apex Chart",
+            "link":"-링크 프로젝트 :",
+            "here":"여기",
+            "linkDeploy":"-링크 배포 프로젝트 :"
+        }
+    }
 }
