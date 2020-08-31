@@ -114,5 +114,61 @@
         "writeYourMessage":"Write your message here...*",
         "address":"District 9, Ho Chi Minh City",
         "send":"Send Message"
+    },
+    "education":{
+        "title":"Education",
+        "edu1":{
+            "time":"2017 - Present",
+            "title":"University of Information Technology (UIT)",
+            "major":"- Major: Information System",
+            "gpa":"- GPA: 7.67/10",
+            "data1":"Data structures and algorithms: 8.3/10",
+            "data2":"Data mining: 9.2/10",
+            "info":"Information-technology project management: 8.6/10"
+        },
+        "edu2":{
+            "time":"June 2018 - March 2019",
+            "title":"Member of CEEC Club (Computer Engineering Embedded Club)",
+            "made":"- Made Remote controlled car by RF with my team.",
+            "participated":"- Participated in teaching basic C programming for."
+        },
+        "edu3":{
+            "time":"June 1, 2020 - July 17, 2020",
+            "title":"Front-End trainee at Anttizen company",
+            "learned":"- Learned and used ReactJS with Typescript for projects and demos in Fresher Tour 3",
+            "learn ":"- Learn and use Material UI, Bootstrap to design the interface"
+        }
+    },
+    "experience":{
+        "title":"Experience",
+        "exp1":{
+            "time":"Sep 14,2019 - Dec 22, 2019",
+            "title":"Online English Test Website",
+            "position":"- Position: Student",
+            "projectDescription":"- Project Description: Online English Test Website Development with HTML, CSS, JavaScript, PHP and MySQL management system.",
+            "teamSize ":"- Team size: 3",
+            "responsive":"- Responsibilities:",
+            "communicate":"Communicate with teammates to clarify key function of the website.",
+            "website":"Website user interface (UI) design",
+            "design":"Design and create database",
+            "technology":"- Technologies: HTML, CSS, JavaScript, PHP, MySQL management system.",
+            "link":"- Technologies: HTML, CSS, JavaScript, PHP, MySQL management system.",
+            "here":"Here"
+        },
+        "exp2":{
+            "time":"June 12, 2020 - July 28, 2020",
+            "title":"Calculator Death Rate and Dashboard Covid-19",
+            "position":"- Position: Intern",
+            "projectDescription":"- Project Description: Estimates of country-bycountry user mortality are caused by Covid-19 and statistics table of covid-19 worldwide.",
+            "teamSize ":"- Team size: 1",
+            "responsive":"- Responsibilities:",
+            "website":"Website user interface (UI) design",
+            "get":"Get data from the API and display it on the interface.",
+            "study":"Study how to calculate Covid-19 mortality rate of each country.",
+            "technology":"- Technologies: ReactJS, TypeScript, Bootstrap, Material UI, Google Chart, Apex Chart",
+            "link":"- Link project:",
+            "here":"Here",
+            "linkDeploy":"- Link deploy project:"
+        }
     }
 }

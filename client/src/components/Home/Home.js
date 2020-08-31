@@ -6,7 +6,7 @@ import ScrollToTop from "../ScrollButton/ScrollToTop.js";
 import { NavLink } from "react-router-dom";
 // import PreLoading from '../PreLoading/PreLoading';
 function Home(props) {
-  // console.log(props.btnColor);
+  console.log(props.btnColor);
   return (
     <>
       {/* <PreLoading /> */}
