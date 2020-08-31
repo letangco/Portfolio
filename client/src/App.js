@@ -1,11 +1,16 @@
 import React from 'react';
 import Menu from './components/Menu/Menu';
 import 'bootstrap/dist/css/bootstrap.css';
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 function App() {
   
   return (
     <div>
-      <Menu />
+      <Router>
+        <Menu />
+      </Router>
     </div>
   );
 }
