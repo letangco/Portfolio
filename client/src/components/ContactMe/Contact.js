@@ -161,7 +161,7 @@ function Contact(props) {
         </div>
       </div>
       {/* Content Contact */}
-      <section className="portfolio section-portfolio">
+      <section className="portfolio section-portfolio contact">
         <div className="row-about">
           <div className={changeColorTitle(props.btnColor)}>
             <h2 style={props.theme==="dark"?{color:"#ffffff"}:{color:"#302e4d"}}>{t('contactMe.titlePage')}</h2>
