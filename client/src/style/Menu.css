@@ -23,18 +23,16 @@ body {
   box-sizing: border-box;
 }
 .section {
-  /* background-color: #f2f2fc; */
   min-height: 100vh;
   display: block;
   padding: 0px 30px;
   left: 270px;
-  /* position: fixed; */
   top: 0;
   right: 0;
-  z-index: 0;
+  z-index: 5 !important;
   overflow-x: hidden;
   overflow-y: auto;
-  opacity: 1;
+  /* opacity: 1; */
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -225,8 +223,10 @@ body {
 
 .home .intro .social-links {
   margin-top: 25px;
+  z-index: 100000 !important ;
 }
 .home .intro .social-links a {
+  z-index: 1000000 !important;
   height: 45px;
   width: 45px;
   display: inline-block;
@@ -322,6 +322,9 @@ body {
 /* Particle Home */
 .particles-home{
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
 }

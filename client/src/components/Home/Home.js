@@ -16,13 +16,11 @@ function Home(props) {
   return (
     <>
       {/* <PreLoading /> */}
-
       <Particles
         className="particles-home"
         params={{
           backgroundMode: {
-            enable: true,
-            zIndex: 0
+            enable: false,
           },
           particles: {
             number: {
@@ -118,9 +116,11 @@ function Home(props) {
               }
             }
           },
-          detectRetina: true,
+          // detectRetina: true,
         }} />
+      
       <div className="container">
+      
         <div className="intro">
 
           <img src={Avatar} alt="Image_avatar" className="shadow-dark" />
@@ -133,7 +133,7 @@ function Home(props) {
           <p style={props.theme === "dark" ? { color: "#e9e9e9" } : { color: "#504e70" }}>
             <Typed
               strings={[
-                "I'm a Web Development","React Developer"]}
+                "I'm a Web Development", "React Developer"]}
               typeSpeed={40}
               backSpeed={70}
               loop >

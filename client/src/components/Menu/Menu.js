@@ -205,7 +205,7 @@ function Menu() {
           {/* Aside */}
           {/* Main content */}
           <div className="main-content">
-            <section className={transportSection(onToggle)} style={theme==="dark"?{backgroundColor:"#151515"}:{}}>
+            <section className={transportSection(onToggle)} style={theme==="dark"?{backgroundColor:"#151515",zIndex: -5000000}:{}}>
               <Switch>
                 <Route path="/" exact component={() => <Home btnColor={btnColor} theme={theme}/>} />
                 <Route path="/about" exact component={() => <About btnColorAbout={btnColor} theme={theme}/>} />
