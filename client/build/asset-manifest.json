@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.cca125dd.chunk.css",
-    "main.js": "/static/js/main.353dd71f.chunk.js",
-    "main.js.map": "/static/js/main.353dd71f.chunk.js.map",
+    "main.js": "/static/js/main.7370b09b.chunk.js",
+    "main.js.map": "/static/js/main.7370b09b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8c576522.js",
     "runtime-main.js.map": "/static/js/runtime-main.8c576522.js.map",
     "static/css/2.f3cffc9e.chunk.css": "/static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.fcb544de.chunk.js": "/static/js/2.fcb544de.chunk.js",
-    "static/js/2.fcb544de.chunk.js.map": "/static/js/2.fcb544de.chunk.js.map",
+    "static/js/2.2174d00c.chunk.js": "/static/js/2.2174d00c.chunk.js",
+    "static/js/2.2174d00c.chunk.js.map": "/static/js/2.2174d00c.chunk.js.map",
     "static/js/3.3408581a.chunk.js": "/static/js/3.3408581a.chunk.js",
     "static/js/3.3408581a.chunk.js.map": "/static/js/3.3408581a.chunk.js.map",
     "static/js/4.52059a1d.chunk.js": "/static/js/4.52059a1d.chunk.js",
@@ -19,11 +19,11 @@
     "static/js/7.3a6ec74d.chunk.js": "/static/js/7.3a6ec74d.chunk.js",
     "static/js/7.3a6ec74d.chunk.js.map": "/static/js/7.3a6ec74d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.321249a6940d90b8f6d17b233277593a.js": "/precache-manifest.321249a6940d90b8f6d17b233277593a.js",
+    "precache-manifest.f9d3e2f4e4f81adc5fc8f656ded89315.js": "/precache-manifest.f9d3e2f4e4f81adc5fc8f656ded89315.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.f3cffc9e.chunk.css.map": "/static/css/2.f3cffc9e.chunk.css.map",
     "static/css/main.cca125dd.chunk.css.map": "/static/css/main.cca125dd.chunk.css.map",
-    "static/js/2.fcb544de.chunk.js.LICENSE.txt": "/static/js/2.fcb544de.chunk.js.LICENSE.txt",
+    "static/js/2.2174d00c.chunk.js.LICENSE.txt": "/static/js/2.2174d00c.chunk.js.LICENSE.txt",
     "static/media/Circle_LTC_AVT.png": "/static/media/Circle_LTC_AVT.81347628.png",
     "static/media/PortFolio_Covi.PNG": "/static/media/PortFolio_Covi.b838fe41.PNG",
     "static/media/PortFolio_English.PNG": "/static/media/PortFolio_English.0d2cbdfb.PNG",
@@ -42,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.8c576522.js",
     "static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.fcb544de.chunk.js",
+    "static/js/2.2174d00c.chunk.js",
     "static/css/main.cca125dd.chunk.css",
-    "static/js/main.353dd71f.chunk.js"
+    "static/js/main.7370b09b.chunk.js"
   ]
 }
