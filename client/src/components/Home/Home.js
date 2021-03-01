@@ -133,7 +133,7 @@ function Home(props) {
           <p style={props.theme === "dark" ? { color: "#e9e9e9" } : { color: "#504e70" }}>
             <Typed
               strings={[
-                "I'm a Web Development", "React Developer"]}
+                "I'm a Web Development", "React Developer | NodeJS Developer"]}
               typeSpeed={40}
               backSpeed={70}
               loop >

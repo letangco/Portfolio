@@ -19,6 +19,7 @@ import {
   faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
 import "./About.css";
+import { NavLink } from "react-router-dom";
 function About(props) {
   // Loading
   const [isLoading, setStateLoading] = useState(false);
@@ -331,8 +332,12 @@ function About(props) {
                     <FontAwesomeIcon icon={faDownload} /> {t('aboutBtn.downloadCV')}
                     </a> */}
                     <p style={{ backgroundColor: props.btnColorAbout }}>
-                      <FontAwesomeIcon icon={faIdCardAlt} />{" "}
-                      {t("aboutBtn.contact")}
+                      {/* <FontAwesomeIcon icon={faIdCardAlt} />{" "}
+                      {t("aboutBtn.contact")} */}
+                      <NavLink exact to="/contact">
+                        <FontAwesomeIcon icon={faIdCardAlt} />{" "}
+                        {t("aboutBtn.contact")}
+                      </NavLink>
                     </p>
                   </div>
                 </div>
